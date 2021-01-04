@@ -44,12 +44,16 @@ textarea,p,blockquote,th,td {
 
 html, body {
     height: 100%;
+    box-sizing: border-box;
 }
 
-button, input, optgroup, select, textarea {
-    color: inherit;
-    font: inherit;
-    margin: 0;
+body, input, select, textarea, button {
+    font-family: noto sans,malgun gothic,AppleGothic,dotum;
+    line-height: 1;
+    letter-spacing: -.05em;
+    color: #4c4c4c;
+    font-size: 12px;
+    max-width: 100%;
 }
 
 div, th, td, li, dt, dd, p {
@@ -103,6 +107,12 @@ li {
 input {
     line-height: normal;
     outline: none;
+}
+
+*::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 

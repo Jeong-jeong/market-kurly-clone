@@ -1,25 +1,147 @@
 @charset "utf-8";
 
-/* 기본 글꼴*/
-body, input, select, textarea, button {
-    font-family: noto sans,malgun gothic,AppleGothic,dotum;
-    line-height: 1;
-    letter-spacing: -.05em;
-    color: #4c4c4c;
-    font-size: 12px;
-    max-width: 100%;
-}
-
-/* 기본 레이아웃*/
+/* header, footer */
 #wrap {
-    background-color: #fff;
-    width: ;
-}
-
-#contents {
     min-width: 1050px;
-    padding-bottom: 120px;
-    background-color: teal;
+    min-height: 100%;
+    /* 임시 height 값 */
+    margin: 0 auto;
+}
+
+#top_event {
+    position: relative;
+    min-width: 1050px;
+    height: 42px;
+    background-color: #5f0080;
+    /* z-index: 9999; */
+}
+
+#top_event .inner_top_event {
+    position: relative;
+    width: 1050px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#top_event .inner_top_event .top_event_bnr {
+    display: block;
+    text-align: center;
+    line-height: 42px;
+    font-size: 14px;
+    color: #fff;
+}
+
+#top_event .inner_top_event .top_event_close {
+    background: url(https://res.kurly.com/pc/ico/1908/ico_close_fff_42x42.png);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#top_event .bnr_arr, .top_event_close {
+    width: 42px;
+    height: 42px;
+}
+
+#header {
+    position: relative;
+}
+
+#header .user_menu {
+    position: relative;
+    width: 1050px;
+    height: 37px;
+    top: 0;
+    margin: 0 auto;
+}
+
+.user_menu .bnr_delivery {
+    position: absolute;
+    top: 7px;
+    left: 17px;
+    height: 22px;
+}
+
+.user_menu .bnr_delivery .bnr_delivery_img {
+    width: 163px;
+    height: 22px;
+}
+
+.user_menu .sign_menu {
+    margin-left: auto;
+    padding: 0 10px;
+    font-family: noto sans;
+    font-weight: 400;
+    letter-spacing: -.3px;
+    box-sizing: border-box;
+}
+
+.user_menu::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.sign_menu {
+    width: 192px;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.sign_menu .join {
+    color: #5f0080;
+}
+
+.sign_menu .sub_menu {
+    display: none;
+}
+
+.sign_menu .link {
+    display: inline-block;
+    line-height: 37px;
+    height: 100%;
+}
+
+.sign_menu .after::after {
+    float: right;
+    content: '';
+    background-color: rgb(216, 216, 216);
+    height: 13px;
+    width: 1px;
+    margin: 13px 8px 0;
+}
+
+.sign_menu .link:last-child{
+    position: relative;
 }
 
 
+.sign_menu .link .service::before {
+    position: absolute;
+    top: 17px;
+    right: -10px;
+    content: '';
+    background-image: url(https://res.kurly.com/pc/ico/1908/ico_down_8x5.png);
+    width: 8px;
+    height: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 공통 클래스 */

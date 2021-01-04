@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
+    <script defer src="main.js"></script>
 </head>
 <body>
 <!-- 규칙:
@@ -14,31 +15,34 @@
     alt로 적절한 대체 텍스트 제공, 너무 긴 경우 공통클래스 blind로 제공-->
     <div id="wrap">
         <div id="top_event">
-            <a href="#" alt="가입하고 100원 혜택받기">
-                지금 가입하고 인기상품
-                <strong>100원</strong>에 받아가세요!
-                <img src="https://res.kurly.com/pc/ico/1908/ico_arrow_fff_84x84.png" class="bnr_arr">
-            </a>
+            <div class="inner_top_event">
+                <a href="#" alt="가입하고 100원 혜택받기" class="top_event_bnr">
+                    지금 가입하고 인기상품
+                    <strong>100원</strong>에 받아가세요!
+                    <img src="https://res.kurly.com/pc/ico/1908/ico_arrow_fff_84x84.png" class="bnr_arr">
+                </a>
+                <button class="top_event_close" alt="배너 끄기"></button>
+            </div>
         </div>
         <!-- id=top_event -->
 
-        
         <div id="header">
             <div class="user_menu">
                 <!-- bnr = banner -->
                 <a href="#" class="bnr_delivery">
                     <img src="https://res.kurly.com/pc/service/common/1908/delivery_190819.gif"
-                    alt="서울, 경기, 인천 샛별배송, 수도권 이외 지역 택배배송">
+                    alt="서울, 경기, 인천 샛별배송, 수도권 이외 지역 택배배송"
+                    class="bnr_delivery_img">
                 </a>
                 <ul class="sign_menu">
-                    <li class="sign_up">
-                        <a href="#" class="link_sign_up">회원가입</a>
+                    <li class="link">
+                        <a href="#" class="link after">회원가입</a>
                     </li>
-                    <li class="login">
-                        <a href="#" class="link_login">로그인</a>
+                    <li class="link">
+                        <a href="#" class="link after">로그인</a>
                     </li>
-                    <li class="service_menu">
-                        <a href="#">고객센터</a>
+                    <li class="link">
+                        <a href="#" class="link service">고객센터</a>
                         <!-- 고객센터 hover 시 sub_menu 등장 -->
                         <ul class="sub_menu">
                             <li>
@@ -157,7 +161,7 @@
         </div>
         <!-- id ="header" -->
         
-        <div id="visual">
+        <div id="visual" style="display: none;">
             <h2 class="blind">마켓컬리 메인</h2>
             <div class="swipe">
                 <ul class="list_goods">
@@ -176,7 +180,7 @@
         </div>
         <!-- id="visual" -->
 
-        <div id="contents">
+        <div id="contents" style="display: none;">
             <div class="qnb">
             <!-- qnb + quick nav bnr -->
             <!-- 팝업 창 한번에 여기서 css 한듯 ㅠ -->
@@ -249,7 +253,7 @@
         </div>
         <!-- id="contents" -->
 
-        <div id="footer">
+        <div id="footer" style="display: none;">
             <div class="inner_footer">
                 <div class="cc_footer"></div>
                 <!-- cc = company calls --> 
