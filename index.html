@@ -77,8 +77,8 @@
             <!-- gnb = global nav bar = 최상위 메뉴  -->
                 <h2 class="blind">메뉴</h2>
                 <ul class="gnb_menu">
-                    <li class="gnb_main">
-                        <a href="#">
+                    <li class="list gnb_main">
+                        <a href="#" class="link">
                             <span class="ico"></span>
                             <!-- ico는 css에서 bg url로 처리 -->
                             <span class="txt">전체 카테고리</span>
@@ -86,10 +86,11 @@
                         <div class="gnb_sub">
                             <ul class="menu">
                                 <li class="current">
+                                    <!-- hover나 active시 current가 옮겨가도록 설정해야 함 -->
                                     <a href="#" class="main_item">
                                         <span class="ico">
-                                            <img src="https://img-cf.kurly.com/shop/data/category/icon_newyear_inactive_pc@2x.1609722514.png" alt="" class="ico_off">
-                                            <img src="https://img-cf.kurly.com/shop/data/category/icon_newyear_active_pc@2x.1609722514.png" alt="" class="ico_on">
+                                            <img src="https://img-cf.kurly.com/shop/data/category/icon_newyear_inactive_pc@2x.1609722514.png" alt="" class="ico off">
+                                            <img src="https://img-cf.kurly.com/shop/data/category/icon_newyear_active_pc@2x.1609722514.png" alt="" class="ico on">
                                             <!--카테고리 별 아이콘은 직관적이게 img src로 바로 삽입 
                                             클릭X(off): 기본, 클릭(on): 보라색 아이콘-->
                                         </span>
@@ -100,40 +101,187 @@
                                         </span>
                                         <!-- tit: text + ico -->
                                     </a>
-                                    <ul class="sub_menu">
-                                        <a href="#" class="sub_item">
-                                            <span class="txt"></span>
-                                        </a>
-                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="main_item">
+                                        <span class="ico">
+                                            <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_inactive_pc@2x.1586324570.png" alt="" class="ico off">
+                                            <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_active_pc@2x.1586324570.png" alt="" class="ico on">
+                                            <!--카테고리 별 아이콘은 직관적이게 img src로 바로 삽입 
+                                                                                    클릭X(off): 기본, 클릭(on): 보라색 아이콘-->
+                                        </span>
+                                        <span class="tit">
+                                            <span class="txt">블라블라블라</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="main_item">
+                                        <span class="ico">
+                                            <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_inactive_pc@2x.1586324570.png" alt=""
+                                                class="ico off">
+                                            <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_active_pc@2x.1586324570.png" alt=""
+                                                class="ico on">
+                                            <!--카테고리 별 아이콘은 직관적이게 img src로 바로 삽입 
+                                                                                                                        클릭X(off): 기본, 클릭(on): 보라색 아이콘-->
+                                        </span>
+                                        <span class="tit">
+                                            <span class="txt">블라블라블라</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="main_item">
+                                        <span class="ico">
+                                            <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_inactive_pc@2x.1586324570.png" alt=""
+                                                class="ico off">
+                                            <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_active_pc@2x.1586324570.png" alt=""
+                                                class="ico on">
+                                            <!--카테고리 별 아이콘은 직관적이게 img src로 바로 삽입 
+                                                                                                                        클릭X(off): 기본, 클릭(on): 보라색 아이콘-->
+                                        </span>
+                                        <span class="tit">
+                                            <span class="txt">블라블라블라</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="main_item">
+                                        <span class="ico">
+                                            <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_inactive_pc@2x.1586324570.png" alt=""
+                                                class="ico off">
+                                            <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_active_pc@2x.1586324570.png" alt=""
+                                                class="ico on">
+                                            <!--카테고리 별 아이콘은 직관적이게 img src로 바로 삽입 
+                                                                                                                        클릭X(off): 기본, 클릭(on): 보라색 아이콘-->
+                                        </span>
+                                        <span class="tit">
+                                            <span class="txt">블라블라블라</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="main_item">
+                                        <span class="ico">
+                                            <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_inactive_pc@2x.1586324570.png" alt=""
+                                                class="ico off">
+                                            <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_active_pc@2x.1586324570.png" alt=""
+                                                class="ico on">
+                                            <!--카테고리 별 아이콘은 직관적이게 img src로 바로 삽입 
+                                                                                                                        클릭X(off): 기본, 클릭(on): 보라색 아이콘-->
+                                        </span>
+                                        <span class="tit">
+                                            <span class="txt">블라블라블라</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="main_item">
+                                        <span class="ico">
+                                            <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_inactive_pc@2x.1586324570.png" alt=""
+                                                class="ico off">
+                                            <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_active_pc@2x.1586324570.png" alt=""
+                                                class="ico on">
+                                            <!--카테고리 별 아이콘은 직관적이게 img src로 바로 삽입 
+                                                                                                                        클릭X(off): 기본, 클릭(on): 보라색 아이콘-->
+                                        </span>
+                                        <span class="tit">
+                                            <span class="txt">블라블라블라</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="main_item">
+                                        <span class="ico">
+                                            <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_inactive_pc@2x.1586324570.png" alt=""
+                                                class="ico off">
+                                            <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_active_pc@2x.1586324570.png" alt=""
+                                                class="ico on">
+                                            <!--카테고리 별 아이콘은 직관적이게 img src로 바로 삽입 
+                                                                                                                        클릭X(off): 기본, 클릭(on): 보라색 아이콘-->
+                                        </span>
+                                        <span class="tit">
+                                            <span class="txt">블라블라블라</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="main_item">
+                                        <span class="ico">
+                                            <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_inactive_pc@2x.1586324570.png" alt=""
+                                                class="ico off">
+                                            <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_active_pc@2x.1586324570.png" alt=""
+                                                class="ico on">
+                                            <!--카테고리 별 아이콘은 직관적이게 img src로 바로 삽입 
+                                                                                                                        클릭X(off): 기본, 클릭(on): 보라색 아이콘-->
+                                        </span>
+                                        <span class="tit">
+                                            <span class="txt">블라블라블라</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="main_item">
+                                        <span class="ico">
+                                            <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_inactive_pc@2x.1586324570.png" alt=""
+                                                class="ico off">
+                                            <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_active_pc@2x.1586324570.png" alt=""
+                                                class="ico on">
+                                            <!--카테고리 별 아이콘은 직관적이게 img src로 바로 삽입 
+                                                                                                                        클릭X(off): 기본, 클릭(on): 보라색 아이콘-->
+                                        </span>
+                                        <span class="tit">
+                                            <span class="txt">블라블라블라</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="main_item">
+                                        <span class="ico">
+                                            <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_inactive_pc@2x.1586324570.png" alt=""
+                                                class="ico off">
+                                            <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_active_pc@2x.1586324570.png" alt=""
+                                                class="ico on">
+                                            <!--카테고리 별 아이콘은 직관적이게 img src로 바로 삽입, 클릭X(off): 기본, 클릭(on): 보라색 아이콘-->
+                                        </span>
+                                        <span class="tit">
+                                            <span class="txt">블라블라블라</span>
+                                        </span>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li class="list">
+                        <a href="#" class="link">
                             <span class="txt">신상품</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li class="list">
+                        <a href="#" class="link">
+                            <span class="txt">베스트</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#" class="link">
                             <span class="txt">알뜰쇼핑</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li class="list">
+                        <a href="#" class="link">
                             <span class="txt">금주혜택</span>
                         </a>
                     </li>
                 </ul>
 
-                <div class="gnb_search">
+                <div class="gnb_search" style="display: none;">
                     <form action="">
                         <input type="text" id="keyword" value="건강 기원 새해맞이 보양식 레시피" title="검색어입력" class="inp_search">
                         <input type="image" src="https://res.kurly.com/pc/service/common/1908/ico_search_x2.png" class="btn_search">
                     </form>
                 </div>
                     
-                <div class="location_login">
+                <div class="location_login" style="display: none;">
                     <!-- 첫 홈페이지 화면에 몇 초간 notice 띄우고 자동으로 off -->
                     <div class="location_notice">
                         <span class="emph">배송지를 등록</span>하고<br>

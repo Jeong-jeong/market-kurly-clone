@@ -37,15 +37,17 @@
 
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,
 h6,form,fieldset,legend,input,button,
-textarea,p,blockquote,th,td {
+textarea,p,blockquote,th,td,a {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html, body {
     height: 100%;
-    box-sizing: border-box;
 }
+
+
 
 body, input, select, textarea, button {
     font-family: noto sans,malgun gothic,AppleGothic,dotum;
@@ -114,5 +116,7 @@ input {
     margin: 0;
     padding: 0;
 }
+
+
 
 
