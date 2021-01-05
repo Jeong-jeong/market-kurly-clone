@@ -69,7 +69,6 @@
 
 .user_menu .sign_menu {
     margin-left: auto;
-    padding: 0 10px;
     font-family: noto sans;
     font-weight: 400;
     letter-spacing: -.3px;
@@ -93,38 +92,56 @@
     color: #5f0080;
 }
 
-.sign_menu .sub_menu {
-    display: none;
-}
-
-.sign_menu .link {
-    display: inline-block;
+.sign_menu .item {
+    display: block;
     line-height: 37px;
     height: 100%;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+.sign_menu .after {
+    position: relative;
 }
 
 .sign_menu .after::after {
-    float: right;
+    position: absolute;
     content: '';
     background-color: rgb(216, 216, 216);
     height: 13px;
     width: 1px;
-    margin: 13px 8px 0;
+    top: 13px;
+    right: 5px;
 }
 
 .sign_menu .link:last-child{
     position: relative;
 }
 
-
 .sign_menu .link .service::before {
     position: absolute;
     top: 17px;
-    right: -10px;
+    right: 3px;
     content: '';
     background-image: url(https://res.kurly.com/pc/ico/1908/ico_down_8x5.png);
     width: 8px;
     height: 5px;
+}
+
+.sign_menu .link:last-child:hover .sub_menu {
+    display: block;
+}
+
+.sign_menu .link:last-child .sub_menu {
+    display: none;
+    position: absolute;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    width: 82px;
+    top: 34px;
+    right: 0px;
+    padding: 8px;
+    line-height: 20px;
 }
 
 
