@@ -144,7 +144,28 @@
     line-height: 20px;
 }
 
+#header .header_logo {
+    width: 1050px;
+    height: 63px;
+    margin: 0 auto;
+    position: relative;
+}
 
+.header_logo .logo {
+    position: absolute;
+    left: 50%;
+    bottom: 6px;
+    width: 200px;
+    height: 79px;
+    margin-left: -100px;
+}
+
+.header_logo .logo_img {
+    display: block;
+    width: 103px;
+    height: 79px;
+    margin: 0 auto;
+}
 
 
 
