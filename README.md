@@ -3,7 +3,7 @@
 
 **2021-01-07 ~ 2021-01-14**   
 : #header .gnb 스크롤 이벤트 구현<br>
-- 스크롤 이벤트 시 position: fixed
+- 스크롤 이벤트 시 position: fixed<br>
 : 우측 플로팅 배너 구현<br>
 : 페이지 상단으로 이동하는 top 버튼 구현<br>
 
