@@ -1,3 +1,5 @@
+/* common.css : header, footer 메인 페이지 */
+
 @charset "utf-8";
 
 /* header, footer */
@@ -13,11 +15,8 @@
     min-width: 1050px;
     height: 42px;
     background-color: #5f0080;
-<<<<<<< HEAD:css/common.css
     /* z-index: 9999; */
-=======
     z-index: 9999;
->>>>>>> 421db8baccdccf75e86e8e140e766c8ebef6744d:2021-01-14/css/common.css
 }
 
 #top_event .inner_top_event {
@@ -174,10 +173,7 @@
     min-width: 1050px;
     background-color: #fff;
     position: relative;
-<<<<<<< HEAD:css/common.css
-=======
     z-index: 100;
->>>>>>> 421db8baccdccf75e86e8e140e766c8ebef6744d:2021-01-14/css/common.css
 }
 
 /* gnb position: fixed 시켜야 함 */
