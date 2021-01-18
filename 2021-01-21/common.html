@@ -21,7 +21,7 @@
     축약형(link, emph, gnb 등)을 먼저 사용)
     alt로 적절한 대체 텍스트 제공, 너무 긴 경우 공통클래스 blind로 제공-->
     <div id="wrap">
-        <div id="top_event">
+        <div id="top_event" class="login"> <!--login class 추가-->
             <div class="inner_top_event">
                 <a href="#" alt="가입하고 100원 혜택받기" class="top_event_bnr">
                     지금 가입하고 인기상품
@@ -29,6 +29,14 @@
                     <img src="https://res.kurly.com/pc/ico/1908/ico_arrow_fff_84x84.png" class="bnr_arr">
                 </a>
                 <button class="top_event_close" alt="배너 끄기"></button>
+            </div>
+            <div class="inner_top_event login">
+                <a href="#" alt="친구 초대하고 적립금 5천원 받기" class="top_event_bnr login">
+                    친구 초대하면 친구도 나도 적립금
+                    <strong class="b">5천원!</strong>
+                    <img src="https://res.kurly.com/pc/ico/1908/ico_arrow_333_84x84.png" class="bnr_arr">
+                </a>
+                <button class="top_event_close login" alt="배너 끄기"></button>
             </div>
         </div>
         <!-- id=top_event -->
@@ -41,12 +49,33 @@
                     alt="서울, 경기, 인천 샛별배송, 수도권 이외 지역 택배배송"
                     class="bnr_delivery_img">
                 </a>
-                <ul class="sign_menu">
+                <ul class="sign_menu login"> <!--login class 추가-->
                     <li class="link">
                         <a href="#" class="item after join">회원가입</a>
                     </li>
                     <li class="link">
-                        <a href="#" class="item after">로그인</a>
+                        <a href="#" class="item after login_none">로그인</a>
+                        <a class="item login login_check grade_comm">
+                            <span class="ico_grade grade0">일반</span>
+                            <span class="txt">
+                                <span class="name"></span>
+                                <span class="sir">님</span>
+                            </span>
+                        </a>
+                        <ul class="sub">
+                            <li class="list">
+                                <a href="#" class="list_item">주문 내역</a>
+                            </li>
+                            <li class="list">
+                                <a href="#" class="list_item">배송지 관리</a>
+                            </li>
+                            <li class="list">
+                                <a href="#" class="list_item">개인 정보 수정</a>
+                            </li>
+                            <li class="list">
+                                <a href="#" class="list_item">로그아웃</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="link">
                         <a href="#" class="item service">고객센터</a>
