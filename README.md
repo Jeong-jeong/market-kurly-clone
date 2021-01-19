@@ -21,7 +21,7 @@
 - top_event_bnr 변경
 - userName이 3글자 이상이면 wrap이 됨 👉🏻 flex를 float로 변경해 글자수 제한 삭제
 
-- [ ] 검색창 x 버튼 클릭 시 clear
+- [x] 검색창 x 버튼 클릭 시 clear, focus 시 배경색 변경
 
 - [ ] 우측 플로팅 배너 구현 👉🏻 floating bnr js로 느리게 따라오기
 
