@@ -2,7 +2,7 @@
 
 @charset "utf-8";
 
-/* 로그인 */
+/* 로그인 클래스 추가 /삭제 */
 /* 로그인: #top_event */
 #top_event .inner_top_event.login {
     display: none;
@@ -163,9 +163,12 @@
 /* 로그인: sign_menu 끝 */
 
 
+
+
+
 /* header, footer */
 #wrap {
-    min-width: 1050px;
+    width: 1050px; /*고정 width 값으로 변경*/
     min-height: 100%;
     /* 임시 height 값 */
     margin: 0 auto;
