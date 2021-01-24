@@ -40,5 +40,11 @@ inpSearch.addEventListener('focus', function(changeBg) {
 inpSearch.addEventListener('blur', function(changeBg) {
     this.style.backgroundColor = '';
 }, true);
+// gnb_search 끝
+
+
+// location_login.
+// 브라우저 로드시 .location_login에 3초간 active 클래스 추가 후 삭제
+
 
 

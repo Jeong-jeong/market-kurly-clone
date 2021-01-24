@@ -8,7 +8,7 @@ ul.appendChild(firstIndexClone); //ul의 가장 뒤에 복사본을 붙임
 
 function move() {
 
-	var curIndex = 0; //current Index
+	let curIndex = 0; //current Index
 
 	setInterval(function(){ //setInterval  = 일정 간격으로 코드를 반복 실행하는 함수, {코드}, 시간간격(ms)
 		ul.style.transition = '0.6s'; //0.2초에 걸쳐 객체 변화
