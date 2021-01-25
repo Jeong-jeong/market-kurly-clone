@@ -26,6 +26,12 @@
     transition: background .5s;
 }
 
+@media (max-width: 1025px) { /*width 1025부터 display: none*/
+    .qnb {
+        display: none;
+    }
+}
+
 #contents .qnb {
     position: fixed;
     right: 20px;

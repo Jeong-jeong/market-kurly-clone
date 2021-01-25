@@ -168,7 +168,7 @@
 
 /* header, footer */
 #wrap {
-    width: 1050px; /*고정 width 값으로 변경*/
+    min-width: 1050px; /*고정 width 값으로 변경할 경우 min-width로 설정했던 모든 코드들이 쓸모없어져버림. >> 다른 방법 찾아야 함!*/
     min-height: 100%;
     /* 임시 height 값 */
     margin: 0 auto;
