@@ -15,7 +15,17 @@
     <script defer src="js/common.js"></script>
     <script defer src="js/contents.js"></script>
     <script defer src="js/visual.js"></script>
-    
+    <SCRIPT LANGUAGE="JavaScript">
+                                            
+        if (top.document.location.search != "?mobile") {
+                var strGoto = "join_complete_mobile.html";             이 부분에 모바일 html 주소 넣어주시면 돼요 !!ㅎㅎ
+                var str = window.navigator.userAgent.toLowerCase();
+                if (/iphone/.test(str) || /android/.test(str) || /opera/.test(str) || /bada/.test(str) || /iemobile/.test(str) || /lgtelecom/.test(str) || /ppc/.test(str) || /sonyericsson/.test(str) || /sonyericsson/.test(str) || /blackberry/.test(str)) {
+                    top.document.location.replace(strGoto);
+                }
+        }
+        
+    </SCRIPT>
 </head>
 <body>
 <!-- 규칙:
