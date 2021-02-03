@@ -6,9 +6,9 @@ const goTop = () => {
   // Scroll | button show/hide
   window.addEventListener('scroll', () => {
     if (document.querySelector('html, body').scrollTop > 1000) {
-      document.getElementById('go-top').style.display = "block";
+      document.getElementById('go-top').style.opacity = "1";
     } else {
-      document.getElementById('go-top').style.display = "none";
+      document.getElementById('go-top').style.opacity = "0";
     }
   });
   // back to top
