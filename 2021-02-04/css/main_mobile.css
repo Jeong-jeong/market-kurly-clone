@@ -1,0 +1,263 @@
+@charset "utf-8";
+
+html, body {
+    height: 100%;
+}
+
+#header_purple .logo .gnbLogoContainer {
+	margin: 0 auto;
+}
+
+#header_purple .logo img {
+	display: block;
+    height: 40px;
+    margin: 5px auto 0;
+}
+
+#lnbMenu {
+    position: fixed;
+	overflow: hidden;
+    top: 50px;
+    left: 0;
+    /* z-index: 12; */
+    width: 100%;
+    height: 45px;
+    background: #fff url(https://res.kurly.com/mobile/service/common/1908/bg_e5e5e5_1x1.png) repeat-x 0 100%;
+    color: #333;
+    line-height: 1.5;
+    letter-spacing: 0;
+}
+
+#lnbMenu .inner_lnb {
+    overflow-x: auto;
+	overflow-y: hidden;
+    width: 100%;
+    height: 1000px;
+}
+#lnbMenu ul { /*ul 가로 정렬*/
+	display: flex;
+	justify-content: space-around;
+}
+
+#lnbMenu.lnb_menu_main ul {
+	width: 100%; /*!important*/
+}
+
+#lnbMenu.lnb_menu_main li {
+	position: relative; /*.bg_on 밑줄 부모*/
+	display: block;
+	width: 100%;
+}
+
+
+#lnbMenu.lnb_menu_main a {
+	display: block;
+	overflow: hidden;
+    /* float: none; */
+    /* margin-left: 0; */
+    padding: 12px 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: #666;
+    white-space: nowrap;
+    text-align: center;
+}
+
+#lnbMenu a.on {
+	font-weight: 600;
+    color: #5f0080;
+}
+
+#lnbMenu.lnb_menu_main a.on { 
+	color: #5f0080;
+}
+
+#lnbMenu.lnb_menu_main .bg_on { /*a태그 가로길이를 갖는 밑줄*/
+	position: absolute;
+	top: 41px;
+	left: 0px;
+    height: 3px;
+    background-color: #5f0080;
+}
+
+#kurly_main.page_main {
+    min-height: 100%;
+    background-color: #fff;
+    opacity: 0;
+}
+
+.page_main .list_goods {
+    letter-spacing: 0;
+}
+
+.page_main .list_goods li {
+	float: left;
+}
+
+.page_main .list_goods .thumb_goods {
+    display: block;
+    background-color: #eee;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.page_main img {
+    width: 100%;
+    vertical-align: top;
+}
+
+#footer {
+    padding-bottom: 110px;
+    background-color: #f4f4f4;
+    color: #999;
+}
+
+#footer .list_menu {
+    overflow: hidden;
+    padding: 18px 0 0 15px;
+}
+
+#footer .list_menu li {
+    float: left;
+    min-width: 62px;
+}
+
+#footer .list_menu .notice {
+    clear: both;
+}
+
+#footer .list_menu .link {
+    display: block;
+    overflow: hidden;
+    height: 32px;
+    line-height: 16px;
+    padding-top: 8px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+#footer .list_sns {
+    overflow: hidden;
+    padding: 3px 0 0 9px;
+}
+
+#footer .list_sns .link {
+    overflow: hidden;
+    float: left;
+    width: 37px;
+    height: 37px;
+    line-height: 0;
+    font-size: 0; /*글씨 안보이게*/
+    text-indent: -9999px; /*글씨 레이아웃 밖으로 밀기*/
+}
+
+#footer .list_sns .ico_instagram {
+    background: url(https://res.kurly.com/mobile/service/common/1903/ico_instagram.png) no-repeat 50% 50%;
+    background-size: 25px 25px;
+}
+
+#footer .list_sns .ico_fb {
+    background: url(https://res.kurly.com/mobile/service/common/1903/ico_fb.png) no-repeat 50% 50%;
+    background-size: 25px 25px;
+}
+
+#footer .list_sns .ico_blog {
+    background: url(https://res.kurly.com/mobile/service/common/1903/ico_blog.png) no-repeat 50% 50%;
+    background-size: 25px 25px;
+}
+
+#footer .list_sns .ico_post {
+    background: url(https://res.kurly.com/mobile/service/common/1903/ico_naverpost.png?v=1) no-repeat 50% 50%;
+    background-size: 25px 25px;
+}
+
+#footer .list_sns .ico_youtube {
+    background: url(https://res.kurly.com/mobile/service/common/1903/ico_youtube.png) no-repeat 50% 50%;
+    background-size: 25px 25px;
+}
+
+#footer .customer {
+    padding: 14px 10px 0 15px;
+}
+
+#footer .customer .tit { /*고객행복센터*/
+    display: block;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+#footer .customer .tel {
+    padding-top: 3px;
+}
+
+#footer .customer .link {
+    font-size: 20px;
+    color: #5f0080;
+    line-height: 24px;
+}
+
+#footer .customer .txt {
+    padding-top: 3px;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+#footer .kakaotalk {
+    position: relative;
+    margin: 0 0 0 15px;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+#footer .kakaotalk .link {
+    color: #5f0080;
+}
+
+#plusfriend-addfriend-button a {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#plusfriend-addfriend-button img {
+    display: none;
+}
+
+#footer .company {
+    padding: 23px 0 0 15px;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+#footer .company .bar {
+    padding: 0 1px 0 2px;
+}
+
+#footer .company .link {
+    color: #5f0080;
+}
+
+#footer .certification .desc {
+    display: block;
+    overflow: hidden;
+    margin-top: 23px;
+}
+
+#footer .certification .logo {
+    float: left;
+    width: 34px;
+    height: 34px;
+    margin-right: 10px;
+}
+
+#footer .certification .eprivacy {
+    margin-top: 12px;
+}
+
+
+
+
