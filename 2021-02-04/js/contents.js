@@ -2,7 +2,7 @@
 
 // #go-top smooth 적용이 안됨 ㅠ
 // a 태그에 #값을 넣으면 top으로 가지만 smooth 적용 안됐던 것. > button으로 변경
-const goTop = () => {
+let goTop = () => {
   // Scroll | button show/hide
   window.addEventListener('scroll', () => {
     if (document.querySelector('html, body').scrollTop > 1000) {

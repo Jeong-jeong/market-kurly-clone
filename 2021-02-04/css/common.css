@@ -180,7 +180,7 @@
     min-width: 1050px;
     height: 42px;
     background-color: #5f0080;
-    z-index: 9999;
+    z-index: 999;
 }
 
 #top_event .inner_top_event {
