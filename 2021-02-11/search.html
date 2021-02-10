@@ -13,7 +13,6 @@
 	
 	<script defer src="js/common.js"></script>
 	<script defer src="js/contents.js"></script>
-	<script defer src="js/search.js"></script>
     <SCRIPT LANGUAGE="JavaScript">
 
         // if (top.document.location.search != "?mobile") {
@@ -110,7 +109,7 @@
             </div>
             <div class="header_logo">
                 <h1 class="logo">
-                    <a href="#" class="link_main">
+                    <a href="common.html" class="link_main">
                         <span class="gnb_logo_container"></span>
                         <img src="https://res.kurly.com/images/marketkurly/logo/logo_x2.png" alt="마켓컬리 로고" class="logo_img">
                     </a>
@@ -420,7 +419,7 @@
 												</a>
 	
 												<div class="group_btn">
-													<button type="button" class="btn btn_cart">
+													<button type="button" class="btn btn_cart"">
 														<span class="blind"></span>
 													</button>
 												</div>
@@ -605,5 +604,67 @@
         </div>
         <!-- id="footer" -->
 	</div>
-	<!-- id="wrap"-->
+    <!-- id="wrap"-->
+    
+    <div id="cartPut">
+        <!-- 로그인 후 장바구니 담기, 게스트로 장바구니 담기 구현하기 -->
+        <!-- dimed 배경은 백그라운드 로딩 위에 띄우기 -->
+        <!-- background load js 구현 -->
+        <div class="cart_option cartList cart_type1" style="display: none;">
+            <div class="inner_option">
+                <button type="button" class="btn_close1">레이어닫기</button>
+                <!-- <strong class="tit_cart">[퀸나] 티파니 에어프라이어 2.3L 2종 QN-AF23W</strong> -->
+                <div class="in_option">
+                    <div class="list_goods">
+                        <ul class="list list_nopackage"> <!--그냥 list와 list_nopackage로 나뉨-->
+                            <li class="on">
+                                <span class="btn_position">
+                                    <button type="button" class="btn_del">
+                                        <span class="txt">삭제하기</span>
+                                    </button>
+                                </span>
+                                <span class="name">[KF365] 감자 1kg</span>
+                                <div class="option">
+                                    <span class="count">
+                                        <button type="button" class="btn down on">수량내리기</button>
+                                        <input type="number" readonly="readonly" onfocus="this.blur()" class="inp">
+                                        <button type="button" class="btn up on">수량올리기</button>
+                                    </span>
+                                    <span class="price">
+                                        <span class="dc_price">2,500원</span>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="total">
+                        <div class="price">
+                            <strong class="tit">합계</strong>
+                            <span class="sum">
+                                <span class="num">2,500</span>
+                                <span class="won">원</span>
+                            </span>
+                        </div>
+                        <p class="txt_point">
+                            <span class="ico">적립</span>
+                            <span class="no_login">
+                                <span>로그인 후, 적립혜택 제공</span>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="group_btn off layer_btn2">
+                    <span class="btn_type2">
+                        <button type="button" class="txt_type">취소</button>
+                    </span>
+                    <span class="btn_type1">
+                        <button type="button" class="txt_type">장바구니 담기</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- id="cartPut" -->
+
+    <script src="js/search.js"></script>
 </body>
