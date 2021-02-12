@@ -244,6 +244,8 @@
     border: 1px solid rgba(0,0,0,.08);
 }
 
+/* btn_cart2를 누르면 show and hide and disappear */
+
 #goodsList .list_goods .thumb .group_btn {
     position: absolute;
     z-index: 2;
@@ -266,7 +268,7 @@
     border: 0;
 }
 
-#goodsList .list_goods .thumb .btn_cart {
+#goodsList .list_goods .thumb .btn_cart2 {
     background: url(https://res.kurly.com/pc/ico/2010/ico_cart.svg) no-repeat 50% 50%;
     background-size: 45px 45px;
 }
@@ -326,6 +328,51 @@
     cursor: default;
 }
 
+.hide {
+    display: none;
+    opacity: 0;
+}
+
+.disappear {
+    animation: fade-out 1s;
+    animation-fill-mode: forwards;
+}
+
+@webkit-keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
 
 .layout-pagination {
     margin: 60px 0 0;
@@ -410,6 +457,16 @@
     height: 100%;
     background-color: #000;
     opacity: .5;
+    display: none;
+}
+
+.bg_loading.show {
+    display: block;
+}
+
+.bg_loading.hide {
+    display: none;
+    opacity: 0;
 }
 
 .loading_show {
@@ -446,6 +503,19 @@
     -webkit-transform: translate(0,-50%);
     -ms-transform: translate(0,-50%);
     transform: translate(0,-50%);
+    display: none;
+}
+
+#cartPut .cart_type1.show {
+    display: block;
+    -webkit-animation: fade-in 1s;
+    animation: fade-in 1s;
+    animation-fill-mode: forwards;
+}
+
+#cartPut .cart_type1.hide {
+    display: none;
+    opacity: 0;
 }
 
 #cartPut .cart_type1 .inner_option {
