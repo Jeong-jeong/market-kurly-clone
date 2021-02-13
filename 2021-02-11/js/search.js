@@ -9,16 +9,15 @@
 
 // 오류: querySelector의 경우 문서 내 1번째 요소만 반환. 
 
-const btnCart2 = document.getElementsByClassName('btn_cart2');
-const cancel = document.getElementsByClassName('btn_type2');
-const bg = document.getElementsByClassName('bg_loading');
-const cartType1 = document.getElementsByClassName('cart_type1');
+const btnCart2 = document.getElementsByClassName('btn_cart2'); // length = li 만든 숫자만큼
+const cancel = document.getElementsByClassName('btn_type2'); // length = 1
+const bg = document.getElementsByClassName('bg_loading'); // length = 1
+const cartType1 = document.getElementsByClassName('cart_type1'); // length = 1
 
 
 
 
 for (let i = 0; i < btnCart2.length; i++) {
-
 	btnCart2[i].addEventListener('click', function() {
 		cartType1[i].classList.add ('show');
 		bg[i].classList.add ('show');
