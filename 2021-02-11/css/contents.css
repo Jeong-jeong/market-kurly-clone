@@ -179,8 +179,16 @@
     margin: 0 auto;
 }
 
-.page_aticle .bx_controls_direction {
+.main_type1 .bx_controls_direction {
     position: relative;
+    width: 1050px;
+    top: -350px;
+    margin: 0 auto;
+}
+
+.main_type3 .bx_controls_direction {
+    position: relative;
+    bottom: 95px;
     width: 1050px;
     margin: 0 auto;
 }
@@ -189,12 +197,18 @@
 .page_aticle .bx_controls_direction .bx-next {
     overflow: hidden;
     position: absolute;
-    bottom: 316px;
     width: 60px;
     height: 60px;
 }
 
-.page_aticle .bx_controls_direction .bx-prev {
+.main_type1 .bx_controls_direction .bx-prev {
+    left: -30px;
+    background: url(https://res.kurly.com/pc/service/main/1908/btn_prev_default.png?v=1) no-repeat 50% 50%;
+    transition: background 0.5s;
+}
+
+.main_type3 .bx_controls_direction .bx-prev {
+    bottom: 58px;
     left: -30px;
     background: url(https://res.kurly.com/pc/service/main/1908/btn_prev_default.png?v=1) no-repeat 50% 50%;
     transition: background 0.5s;
@@ -206,7 +220,13 @@
     transition: background 0.5s;
 }
 
-.page_aticle .bx_controls_direction .bx-next {
+.main_type1 .bx_controls_direction .bx-next {
+    right: -30px;
+    background: url(https://res.kurly.com/pc/service/main/1908/btn_next_default.png?v=1) no-repeat 50% 50%;
+    transition: background 0.5s;
+}
+
+.main_type3 .bx_controls_direction .bx-next {
     right: -30px;
     background: url(https://res.kurly.com/pc/service/main/1908/btn_next_default.png?v=1) no-repeat 50% 50%;
     transition: background 0.5s;
@@ -217,6 +237,8 @@
     background: url(https://res.kurly.com/pc/service/main/1908/btn_next_default_hover_x1.png?v=1) no-repeat 50% 50%;;
     transition: background 0.5s;
 }
+
+
 
 /* main_type2 = 이벤트 소식 */
 .page_aticle .bg {
@@ -333,7 +355,3 @@
     font-weight: 700;
 }
 
-.main_type3 .bx_controls_direction .bx-prev, 
-.main_type3 .bx_controls_direction .bx-next {
-    bottom: 58px;
-}

@@ -12,10 +12,17 @@
     <!-- visual.css : header 바로 밑 이미지 슬라이드 파트 -->
     <link rel="stylesheet" href="css/contents.css">
     <!-- header와 footer를 제외한 콘텐츠 메인 페이지 -->
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="./swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="./swiper/swiper-bundle.min.css">
+
     <script defer src="js/common.js"></script>
     <script defer src="js/contents.js"></script>
     <script defer src="js/visual.js"></script>
     <script defer src="js/common_mobile.js"></script>
+    <script src="./swiper/swiper-bundle.js"></script>
+    <script src="./swiper/swiper-bundle.min.js"></script>
     <SCRIPT LANGUAGE="JavaScript">
 
         if (top.document.location.search != "?mobile") {
@@ -422,15 +429,15 @@
                     <!-- list_goods는 마켓컬리와 똑같이 html 파일에서 스타일함 -->
                     <div class="list_goods">
                         <div class="bx_wrapper" style="max-width: 1054px; margin: 0 auto;">
-                            <div class="vx-viewport" style="width: 100%; height: 506px; position: relative; overflow: hidden;">
+                            <div class="vx-viewport swiper-container first" style="width: 100%; height: 506px; position: relative; overflow: hidden;">
                                 <!-- overflow: hidden 임시로 삭제 -->
-                                <ul data-title="이 상품 어때요?" data-section="today_recommendation" class="list_goods_ul" 
+                                <ul data-title="이 상품 어때요?" data-section="today_recommendation" class="list_goods_ul swiper-wrapper" 
                                 style="width: 2215%; position: relative; transition-duration: 0.5s; transform: translate3d(0, 0, 0);"> 
                                 <!--width: 2215%는 아직 뭔지 모르겠음  -->
                                 <!-- data-section과 data-name은 임시값 -->
 
                                 <!-- list data  -->
-                                    <li data-index="1" data-name="today_recommendation" class="list_item"
+                                    <li data-index="1" data-name="today_recommendation" class="list_item swiper-slide"
                                     style="float: left; position: relative; width: 249px; margin-right: 18px;">
                                     <a class="thumb_goods">
                                         <img src="https://img-cf.kurly.com/shop/data/my_icon/icon_save_10.png" alt="SALE" class="ico">
@@ -448,7 +455,7 @@
                                         <span class="cost">12,000원</span>
                                     </div>
                                     </li>
-                                    <li data-index="2" data-name="today_recommendation" class="list_item"
+                                    <li data-index="2" data-name="today_recommendation" class="list_item swiper-slide"
                                     style="float: left; position: relative; width: 249px; margin-right: 18px;">
                                     <a class="thumb_goods">
                                         <img src="https://img-cf.kurly.com/shop/data/my_icon/icon_save_15.png" alt="SALE" class="ico">
@@ -466,7 +473,7 @@
                                         <span class="cost">2,200원</span>
                                     </div>
                                     </li>
-                                    <li data-index="3" data-name="today_recommendation" class="list_item"
+                                    <li data-index="3" data-name="today_recommendation" class="list_item swiper-slide"
                                     style="float: left; position: relative; width: 249x; margin-right: 18px;">
                                     <a class="thumb_goods">
                                         <img src="https://img-cf.kurly.com/shop/data/my_icon/icon_save_15.png" alt="SALE" class="ico">
@@ -484,7 +491,7 @@
                                         <span class="cost">8,600원</span>
                                     </div>
                                     </li>
-                                    <li data-index="4" data-name="today_recommendation" class="list_item"
+                                    <li data-index="4" data-name="today_recommendation" class="list_item swiper-slide"
                                     style="float: left; position: relative; width: 249px; margin-right: 18px;">
                                     <a class="thumb_goods">
                                         <img src="https://img-cf.kurly.com/shop/data/my_icon/icon_save_5.png" alt="SALE" class="ico">
@@ -502,7 +509,7 @@
                                         <span class="cost">6,900원</span>
                                     </div>
                                     </li>
-                                    <li data-index="5" data-name="today_recommendation" class="list_item"
+                                    <li data-index="5" data-name="today_recommendation" class="list_item swiper-slide"
                                     style="float: left; position: relative; width: 249px; margin-right: 18px;">
                                     <a class="thumb_goods">
                                         <img src="https://img-cf.kurly.com/shop/data/my_icon/icon_save_5.png" alt="SALE" class="ico">
@@ -520,7 +527,7 @@
                                         <span class="cost">6,900원</span>
                                     </div>
                                     </li>
-                                    <li data-index="6" data-name="today_recommendation" class="list_item"
+                                    <li data-index="6" data-name="today_recommendation" class="list_item swiper-slide"
                                     style="float: left; position: relative; width: 249px; margin-right: 18px;">
                                     <a class="thumb_goods">
                                         <img src="https://img-cf.kurly.com/shop/data/my_icon/icon_save_5.png" alt="SALE" class="ico">
@@ -538,7 +545,7 @@
                                         <span class="cost">6,900원</span>
                                     </div>
                                     </li>
-                                    <li data-index="7" data-name="today_recommendation" class="list_item"
+                                    <li data-index="7" data-name="today_recommendation" class="list_item swiper-slide"
                                     style="float: left; position: relative; width: 249px; margin-right: 18px;">
                                     <a class="thumb_goods">
                                         <img src="https://img-cf.kurly.com/shop/data/my_icon/icon_save_5.png" alt="SALE" class="ico">
@@ -556,7 +563,7 @@
                                         <span class="cost">6,900원</span>
                                     </div>
                                     </li>
-                                    <li data-index="8" data-name="today_recommendation" class="list_item"
+                                    <li data-index="8" data-name="today_recommendation" class="list_item swiper-slide"
                                     style="float: left; position: relative; width: 249px; margin-right: 18px;">
                                     <a class="thumb_goods">
                                         <img src="https://img-cf.kurly.com/shop/data/my_icon/icon_save_5.png" alt="SALE" class="ico">
@@ -579,11 +586,11 @@
                             </div>
                             <!-- bx-viewport 끝 -->
                             <div class="bx_controls_direction">
-                            <!-- 버튼을 누르면 오른쪽으로 1068px 만큼 이동, 끝에 닿으면 버튼 사라짐 -->
-                                <a class="bx-prev"><span class="blind">이전으로</span></a>
-                                <a class="bx-next"><span class="blind">이후로</span></a>
+                                <a id="swiper-prev1" class="bx-prev swiper-button-prev"><span class="blind">이전으로</span></a>
+                                <a id="swiper-next1" class="bx-next swiper-button-next"><span class="blind">이후로</span></a>
                             </div>
                         </div>
+                        
                     </div>
                         
                 </div>
@@ -682,15 +689,13 @@
                         <!-- list_goods는 마켓컬리와 똑같이 html 파일에서 스타일함 -->
                         <div class="list_goods">
                             <div class="bx_wrapper" style="max-width: 1054px; margin: 0 auto;">
-                                <div class="vx-viewport" style="width: 100%; height: 506px; position: relative; overflow: hidden;">
-                                    <!-- overflow: hidden 임시로 삭제 -->
-                                    <ul data-title="이 상품 어때요?" data-section="today_recommendation" class="list_goods_ul" 
+                                <div class="vx-viewport swiper-container second" style="width: 100%; height: 506px; position: relative; overflow: hidden;">
+                                    <ul data-title="이 상품 어때요?" data-section="today_recommendation" class="list_goods_ul swiper-wrapper" 
                                     style="width: 2215%; position: relative; transition-duration: 0.5s; transform: translate3d(0, 0, 0);"> 
-                                    <!--width: 2215%는 아직 뭔지 모르겠음  -->
                                     <!-- data-section과 data-name은 임시값 -->
     
                                     <!-- list data  -->
-                                        <li data-index="1" data-name="today_recommendation" class="list_item"
+                                        <li data-index="1" data-name="today_recommendation" class="list_item swiper-slide"
                                         style="float: left; position: relative; width: 249px; margin-right: 18px;">
                                         <a class="thumb_goods">
                                             <img src="https://img-cf.kurly.com/shop/data/my_icon/icon_save_10.png" alt="SALE" class="ico">
@@ -708,7 +713,7 @@
                                             <span class="cost">12,000원</span>
                                         </div>
                                         </li>
-                                        <li data-index="2" data-name="today_recommendation" class="list_item"
+                                        <li data-index="2" data-name="today_recommendation" class="list_item swiper-slide"
                                         style="float: left; position: relative; width: 249px; margin-right: 18px;">
                                         <a class="thumb_goods">
                                             <img src="https://img-cf.kurly.com/shop/data/my_icon/icon_save_15.png" alt="SALE" class="ico">
@@ -726,7 +731,7 @@
                                             <span class="cost">2,200원</span>
                                         </div>
                                         </li>
-                                        <li data-index="3" data-name="today_recommendation" class="list_item"
+                                        <li data-index="3" data-name="today_recommendation" class="list_item swiper-slide"
                                         style="float: left; position: relative; width: 249x; margin-right: 18px;">
                                         <a class="thumb_goods">
                                             <img src="https://img-cf.kurly.com/shop/data/my_icon/icon_save_15.png" alt="SALE" class="ico">
@@ -744,7 +749,7 @@
                                             <span class="cost">8,600원</span>
                                         </div>
                                         </li>
-                                        <li data-index="4" data-name="today_recommendation" class="list_item"
+                                        <li data-index="4" data-name="today_recommendation" class="list_item swiper-slide"
                                         style="float: left; position: relative; width: 249px; margin-right: 18px;">
                                         <a class="thumb_goods">
                                             <img src="https://img-cf.kurly.com/shop/data/my_icon/icon_save_5.png" alt="SALE" class="ico">
@@ -762,7 +767,7 @@
                                             <span class="cost">6,900원</span>
                                         </div>
                                         </li>
-                                        <li data-index="5" data-name="today_recommendation" class="list_item"
+                                        <li data-index="5" data-name="today_recommendation" class="list_item swiper-slide"
                                         style="float: left; position: relative; width: 249px; margin-right: 18px;">
                                         <a class="thumb_goods">
                                             <img src="https://img-cf.kurly.com/shop/data/my_icon/icon_save_5.png" alt="SALE" class="ico">
@@ -780,7 +785,7 @@
                                             <span class="cost">6,900원</span>
                                         </div>
                                         </li>
-                                        <li data-index="6" data-name="today_recommendation" class="list_item"
+                                        <li data-index="6" data-name="today_recommendation" class="list_item swiper-slide"
                                         style="float: left; position: relative; width: 249px; margin-right: 18px;">
                                         <a class="thumb_goods">
                                             <img src="https://img-cf.kurly.com/shop/data/my_icon/icon_save_5.png" alt="SALE" class="ico">
@@ -798,7 +803,7 @@
                                             <span class="cost">6,900원</span>
                                         </div>
                                         </li>
-                                        <li data-index="7" data-name="today_recommendation" class="list_item"
+                                        <li data-index="7" data-name="today_recommendation" class="list_item swiper-slide"
                                         style="float: left; position: relative; width: 249px; margin-right: 18px;">
                                         <a class="thumb_goods">
                                             <img src="https://img-cf.kurly.com/shop/data/my_icon/icon_save_5.png" alt="SALE" class="ico">
@@ -816,7 +821,7 @@
                                             <span class="cost">6,900원</span>
                                         </div>
                                         </li>
-                                        <li data-index="8" data-name="today_recommendation" class="list_item"
+                                        <li data-index="8" data-name="today_recommendation" class="list_item swiper-slide"
                                         style="float: left; position: relative; width: 249px; margin-right: 18px;">
                                         <a class="thumb_goods">
                                             <img src="https://img-cf.kurly.com/shop/data/my_icon/icon_save_5.png" alt="SALE" class="ico">
@@ -840,8 +845,8 @@
                                 <!-- bx-viewport 끝 -->
                                 <div class="bx_controls_direction">
                                 <!-- 버튼을 누르면 오른쪽으로 1068px 만큼 이동, 끝에 닿으면 버튼 사라짐 -->
-                                    <a class="bx-prev"><span class="blind">이전으로</span></a>
-                                    <a class="bx-next"><span class="blind">이후로</span></a>
+                                    <a id="swiper-prev2" class="bx-prev swiper-button-prev"><span class="blind">이전으로</span></a>
+                                    <a id="swiper-next2" class="bx-next swiper-button-next"><span class="blind">이후로</span></a>
                                 </div>
                             </div>
                         </div>
@@ -935,78 +940,78 @@
                 <div class="list_goods">
                     <div class="bx-wrapper"
                     style="max-width: 1056px; margin: 0 auto;">
-                        <div class="bx-viewport"
+                        <div class="bx-viewport swiper-container third"
                         style="width: 100%; height: 176px; overflow: hidden; position: relative;">
-                            <ul data-title="인스타그램 고객 후기" data-section="instagram" class="list_goods_ul"
+                            <ul data-title="인스타그램 고객 후기" data-section="instagram" class="list_goods_ul swiper-wrapper"
                             style="width: 2715%; position: relative; transition-duration: 0.5s; transform: translate3d(0, 0, 0);">
 
-                                <li data-index="1" data-name="instagram"
+                                <li data-index="1" data-name="instagram" class="swiper-slide"
                                 style="float: left; position: relative; width: 175px;">
                                     <a target="_blank" class="thumb_goods">
                                         <img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/138612535_1002060843651200_8038603372875075827_n.jpg?_nc_cat=111&ccb=2&_nc_sid=8ae9d6&_nc_ohc=0U-KXgXxsEkAX_l4m9A&_nc_ht=scontent-nrt1-1.cdninstagram.com&oh=909096a846151a22509a261aa0ae85e7&oe=603340FE" alt="상품이미지" class="thumb">
                                     </a>
                                 </li>
-                                <li data-index="2" data-name="instagram"
+                                <li data-index="2" data-name="instagram" class="swiper-slide"
                                 style="float: left; position: relative; width: 175px;">
                                     <a target="_blank" class="thumb_goods">
                                         <img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/138612535_1002060843651200_8038603372875075827_n.jpg?_nc_cat=111&ccb=2&_nc_sid=8ae9d6&_nc_ohc=0U-KXgXxsEkAX_l4m9A&_nc_ht=scontent-nrt1-1.cdninstagram.com&oh=909096a846151a22509a261aa0ae85e7&oe=603340FE" alt="상품이미지" class="thumb">
                                     </a>
                                 </li>
-                                <li data-index="3" data-name="instagram"
+                                <li data-index="3" data-name="instagram" class="swiper-slide"
                                 style="float: left; position: relative; width: 175px;">
                                     <a target="_blank" class="thumb_goods">
                                         <img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/138612535_1002060843651200_8038603372875075827_n.jpg?_nc_cat=111&ccb=2&_nc_sid=8ae9d6&_nc_ohc=0U-KXgXxsEkAX_l4m9A&_nc_ht=scontent-nrt1-1.cdninstagram.com&oh=909096a846151a22509a261aa0ae85e7&oe=603340FE" alt="상품이미지" class="thumb">
                                     </a>
                                 </li>
-                                <li data-index="4" data-name="instagram"
+                                <li data-index="4" data-name="instagram" class="swiper-slide"
                                 style="float: left; position: relative; width: 175px;">
                                     <a target="_blank" class="thumb_goods">
                                         <img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/138612535_1002060843651200_8038603372875075827_n.jpg?_nc_cat=111&ccb=2&_nc_sid=8ae9d6&_nc_ohc=0U-KXgXxsEkAX_l4m9A&_nc_ht=scontent-nrt1-1.cdninstagram.com&oh=909096a846151a22509a261aa0ae85e7&oe=603340FE" alt="상품이미지" class="thumb">
                                     </a>
                                 </li>
-                                <li data-index="5" data-name="instagram"
+                                <li data-index="5" data-name="instagram" class="swiper-slide"
                                 style="float: left; position: relative; width: 175px;">
                                     <a target="_blank" class="thumb_goods">
                                         <img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/138612535_1002060843651200_8038603372875075827_n.jpg?_nc_cat=111&ccb=2&_nc_sid=8ae9d6&_nc_ohc=0U-KXgXxsEkAX_l4m9A&_nc_ht=scontent-nrt1-1.cdninstagram.com&oh=909096a846151a22509a261aa0ae85e7&oe=603340FE" alt="상품이미지" class="thumb">
                                     </a>
                                 </li>
-                                <li data-index="6" data-name="instagram"
+                                <li data-index="6" data-name="instagram" class="swiper-slide"
                                 style="float: left; position: relative; width: 175px;">
                                     <a target="_blank" class="thumb_goods">
                                         <img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/138612535_1002060843651200_8038603372875075827_n.jpg?_nc_cat=111&ccb=2&_nc_sid=8ae9d6&_nc_ohc=0U-KXgXxsEkAX_l4m9A&_nc_ht=scontent-nrt1-1.cdninstagram.com&oh=909096a846151a22509a261aa0ae85e7&oe=603340FE" alt="상품이미지" class="thumb">
                                     </a>
                                 </li>
-                                <li data-index="7" data-name="instagram"
+                                <li data-index="7" data-name="instagram" class="swiper-slide"
                                 style="float: left; position: relative; width: 175px;">
                                     <a target="_blank" class="thumb_goods">
                                         <img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/133740249_1081468305645551_7425631588608142276_n.jpg?_nc_cat=107&ccb=2&_nc_sid=8ae9d6&_nc_ohc=1Qi4yQTV7-sAX8C3E3k&_nc_oc=AQlQUi3rwII9v6DDg73faC4_uBoOiSX5DealKSCqkYpXFyTasH431k2bHA2ORgywQEE&_nc_ht=scontent-nrt1-1.cdninstagram.com&oh=e17392cc8c4c5723a1de33248790d002&oe=60382B3A" alt="상품이미지" class="thumb">
                                     </a>
                                 </li>
-                                <li data-index="8" data-name="instagram"
+                                <li data-index="8" data-name="instagram" class="swiper-slide"
                                 style="float: left; position: relative; width: 175px;">
                                     <a target="_blank" class="thumb_goods">
                                         <img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/133740249_1081468305645551_7425631588608142276_n.jpg?_nc_cat=107&ccb=2&_nc_sid=8ae9d6&_nc_ohc=1Qi4yQTV7-sAX8C3E3k&_nc_oc=AQlQUi3rwII9v6DDg73faC4_uBoOiSX5DealKSCqkYpXFyTasH431k2bHA2ORgywQEE&_nc_ht=scontent-nrt1-1.cdninstagram.com&oh=e17392cc8c4c5723a1de33248790d002&oe=60382B3A" alt="상품이미지" class="thumb">
                                     </a>
                                 </li>
-                                <li data-index="9" data-name="instagram"
+                                <li data-index="9" data-name="instagram" class="swiper-slide"
                                 style="float: left; position: relative; width: 175px;">
                                     <a target="_blank" class="thumb_goods">
                                         <img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/133740249_1081468305645551_7425631588608142276_n.jpg?_nc_cat=107&ccb=2&_nc_sid=8ae9d6&_nc_ohc=1Qi4yQTV7-sAX8C3E3k&_nc_oc=AQlQUi3rwII9v6DDg73faC4_uBoOiSX5DealKSCqkYpXFyTasH431k2bHA2ORgywQEE&_nc_ht=scontent-nrt1-1.cdninstagram.com&oh=e17392cc8c4c5723a1de33248790d002&oe=60382B3A" alt="상품이미지" class="thumb">
                                     </a>
                                 </li>
-                                <li data-index="10" data-name="instagram"
+                                <li data-index="10" data-name="instagram" class="swiper-slide"
                                 style="float: left; position: relative; width: 175px;">
                                     <a target="_blank" class="thumb_goods">
                                         <img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/133740249_1081468305645551_7425631588608142276_n.jpg?_nc_cat=107&ccb=2&_nc_sid=8ae9d6&_nc_ohc=1Qi4yQTV7-sAX8C3E3k&_nc_oc=AQlQUi3rwII9v6DDg73faC4_uBoOiSX5DealKSCqkYpXFyTasH431k2bHA2ORgywQEE&_nc_ht=scontent-nrt1-1.cdninstagram.com&oh=e17392cc8c4c5723a1de33248790d002&oe=60382B3A" alt="상품이미지" class="thumb">
                                     </a>
                                 </li>
-                                <li data-index="11" data-name="instagram"
+                                <li data-index="11" data-name="instagram" class="swiper-slide"
                                 style="float: left; position: relative; width: 175px;">
                                     <a target="_blank" class="thumb_goods">
                                         <img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/133740249_1081468305645551_7425631588608142276_n.jpg?_nc_cat=107&ccb=2&_nc_sid=8ae9d6&_nc_ohc=1Qi4yQTV7-sAX8C3E3k&_nc_oc=AQlQUi3rwII9v6DDg73faC4_uBoOiSX5DealKSCqkYpXFyTasH431k2bHA2ORgywQEE&_nc_ht=scontent-nrt1-1.cdninstagram.com&oh=e17392cc8c4c5723a1de33248790d002&oe=60382B3A" alt="상품이미지" class="thumb">
                                     </a>
                                 </li>
-                                <li data-index="12" data-name="instagram"
+                                <li data-index="12" data-name="instagram" class="swiper-slide"
                                 style="float: left; position: relative; width: 175px;">
                                     <a target="_blank" class="thumb_goods">
                                         <img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/133740249_1081468305645551_7425631588608142276_n.jpg?_nc_cat=107&ccb=2&_nc_sid=8ae9d6&_nc_ohc=1Qi4yQTV7-sAX8C3E3k&_nc_oc=AQlQUi3rwII9v6DDg73faC4_uBoOiSX5DealKSCqkYpXFyTasH431k2bHA2ORgywQEE&_nc_ht=scontent-nrt1-1.cdninstagram.com&oh=e17392cc8c4c5723a1de33248790d002&oe=60382B3A" alt="상품이미지" class="thumb">
@@ -1017,9 +1022,8 @@
                         </div>
                         
                         <div class="bx_controls_direction">
-                        <!-- 버튼을 누르면 오른쪽으로 1068px 만큼 이동, 끝에 닿으면 버튼 사라짐 -->
-                            <a class="bx-prev"><span class="blind">이전으로</span></a>
-                            <a class="bx-next"><span class="blind">이후로</span></a>
+                            <a id="swiper-prev3" class="bx-prev swiper-button-prev"><span class="blind">이전으로</span></a>
+                            <a id="swiper-next3" class="bx-next swiper-button-next"><span class="blind">이후로</span></a>
                         </div>
                     </div>
                 </div>
@@ -1166,5 +1170,51 @@
         </div>
         <!-- id="footer" -->
     </div>
+    <script>
+       let type1 = new Swiper('.first', {
+
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+
+        loopFillGroupWithBlank: true,
+
+        navigation: {
+            nextEl: '#swiper-next1',
+            prevEl: '#swiper-prev1',
+        },
+        });
+
+        let type1Dup = new Swiper('.second', {
+
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+
+        loopFillGroupWithBlank: true,
+
+        navigation: {
+            nextEl: '#swiper-next2',
+            prevEl: '#swiper-prev2',
+        },
+        });
+
+        let type3 = new Swiper('.third', {
+        
+        slidesPerView: 6,
+        slidesPerGroup: 1,
+        
+        loopFillGroupWithBlank: true,
+        
+        navigation: {
+            nextEl: '#swiper-next3',
+            prevEl: '#swiper-prev3',
+        },
+        });
+    </script>
+
+
+        
+
+
+
 </body>
 </html>
