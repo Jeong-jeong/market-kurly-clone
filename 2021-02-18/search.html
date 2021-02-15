@@ -10,7 +10,6 @@
     <!-- common.css : header, footer 메인 페이지 -->
 	<link rel="stylesheet" href="css/search.css">
     <!-- search.css : 검색 페이지 -->
-	
 	<script defer src="js/common.js"></script>
     <script defer src="js/contents.js"></script>
     <script defer src="js/search.js"></script>
@@ -420,7 +419,7 @@
 												</a>
 	
 												<div class="group_btn">
-													<button type="button" class="btn btn_cart2"">
+													<button type="button" class="btn btn_cart2">
 														<span class="blind"></span>
 													</button>
 												</div>
@@ -429,9 +428,11 @@
 											<a class="info">
 												<span class="name">[KF365] 감자 1kg</span>
 												<span class="cost">
-													<span class="price">2,500원</span> 
+													<span class="price">2,500</span> 
+                                                    <span class="won">원</span>
+                                                    <input type="hidden" value="2500" class="value"> <!-- 백앤드에서 상품가격 value 에 넣어줘야됨-->
 												</span>
-												<span class="desc">믿고 먹을 수 있는 상품을 합리적인 가격에, KF365</span>
+												<span class="desc">맛있는 감자에요</span>
 												<span class="tag"></span>
 											</a>
 										</div>
@@ -454,18 +455,21 @@
 												</a>
 	
 												<div class="group_btn">
-													<button type="button" class="btn btn_cart2"">
+													<button type="button" class="btn btn_cart2">
 														<span class="blind"></span>
 													</button>
 												</div>
 											</div>
 											
 											<a class="info">
-												<span class="name">[KF365] 감자 1kg</span>
+												<span class="name">[KF365] 고구마 1kg</span>
 												<span class="cost">
-													<span class="price">2,500원</span> 
+													<span class="price">3,000</span> 
+                                                    <span class="won">원</span>
+                                                    <input type="hidden" value="3000" class="value"> <!-- 백앤드에서 상품가격 value 에 넣어줘야됨-->
+
 												</span>
-												<span class="desc">믿고 먹을 수 있는 상품을 합리적인 가격에, KF365</span>
+												<span class="desc">몸에 좋은 고구마</span>
 												<span class="tag"></span>
 											</a>
 										</div>
@@ -488,22 +492,25 @@
 												</a>
 	
 												<div class="group_btn">
-													<button type="button" class="btn btn_cart2"">
+													<button type="button" class="btn btn_cart2">
 														<span class="blind"></span>
 													</button>
 												</div>
 											</div>
 											
 											<a class="info">
-												<span class="name">[KF365] 감자 1kg</span>
+												<span class="name">수박</span>
 												<span class="cost">
-													<span class="price">2,500원</span> 
+													<span class="price">10,000</span> 
+                                                    <span class="won">원</span>
+                                                    <input type="hidden" value="10000" class="value"> <!-- 백앤드에서 상품가격 value 에 넣어줘야됨-->
 												</span>
-												<span class="desc">믿고 먹을 수 있는 상품을 합리적인 가격에, KF365</span>
+												<span class="desc">여름엔 수박이지</span>
 												<span class="tag"></span>
 											</a>
 										</div>
 									</li>
+                                    
 	
 	
 								</ul>
@@ -686,16 +693,12 @@
                         <div class="list_goods">
                             <ul class="list list_nopackage"> <!--그냥 list와 list_nopackage로 나뉨-->
                                 <li class="on">
-                                    <span class="btn_position">
-                                        <button type="button" class="btn_del">
-                                            <span class="txt">삭제하기</span>
-                                        </button>
-                                    </span>
+                                    
                                     <span class="name">[KF365] 감자 1kg</span>
                                     <div class="option">
                                         <span class="count">
                                             <button type="button" class="btn down on">수량내리기</button>
-                                            <input type="number" readonly="readonly" onfocus="this.blur()" class="inp">
+                                            <input type="text" readonly="readonly" class="inp" value = 1>
                                             <button type="button" class="btn up on">수량올리기</button>
                                         </span>
                                         <span class="price">
@@ -715,8 +718,11 @@
                             </div>
                             <p class="txt_point">
                                 <span class="ico">적립</span>
-                                <span class="no_login">
+                                <span class="no_login hide"> <!--로그인 안된 상태(기본), 로그인 후엔 hide 클래스 추가-->
                                     <span>로그인 후, 적립혜택 제공</span>
+                                </span>
+                                <span class="point show">구매 시 <!--로그인 되었을 때 show 클래스 추가-->
+                                    <strong class="emph"></strong>
                                 </span>
                             </p>
                         </div>

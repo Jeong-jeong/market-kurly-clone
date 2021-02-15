@@ -637,6 +637,8 @@
 
 #cartPut .cart_option .list .up {
     float: right;
+    position: relative;
+    bottom: 30px;
     background: #fff url(https://res.kurly.com/pc/ico/2010/ico_plus.svg) no-repeat 50% 50%;
     background-size: 30px 30px;
 }
@@ -775,6 +777,25 @@
     vertical-align: 1px;
 }
 
+
+#cartPut .txt_point .no_login {
+    display: block;
+}
+
+#cartPut .txt_point .no_login.hide {
+    display: none;
+}
+
+#cartPut .txt_point .point {
+    display: none;
+}
+
+#cartPut .txt_point .point.show {
+    display: inline;
+}
+
+
+
 #cartPut .cart_option .group_btn {
     overflow: hidden;
     width: 100%;
@@ -831,6 +852,8 @@
     background-color: #5f0080;
     color: #fff;
 }
+
+
 
 
 
