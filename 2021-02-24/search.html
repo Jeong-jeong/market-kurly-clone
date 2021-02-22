@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INU Kurly</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <!-- common.css : header, footer 메인 페이지 -->
+	<link rel="stylesheet" href="css/search.css">
+    <!-- search.css : 검색 페이지 -->
+	<script defer src="js/common.js"></script>
+    <script defer src="js/contents.js"></script>
+    <script defer src="js/search.js"></script>
+    <SCRIPT LANGUAGE="JavaScript">
+
+        // if (top.document.location.search != "?mobile") {
+        //         var strGoto = "main_mobile.html";
+        //         var str = window.navigator.userAgent.toLowerCase();
+        //         if (/iphone/.test(str) || /android/.test(str) || /opera/.test(str) || /bada/.test(str) || /iemobile/.test(str) || /lgtelecom/.test(str) || /ppc/.test(str) || /sonyericsson/.test(str) || /sonyericsson/.test(str) || /blackberry/.test(str)) {
+        //             top.document.location.replace(strGoto);
+        //         }
+        // }
+    </SCRIPT>
+</head>
+
+<body>
+	<div id="wrap">
+        <div id="top_event" class="login"> <!--login class 추가-->
+            <div class="inner_top_event">
+                <a href="#" alt="가입하고 100원 혜택받기" class="top_event_bnr">
+                    지금 가입하고 인기상품
+                    <strong>100원</strong>에 받아가세요!
+                    <img src="https://res.kurly.com/pc/ico/1908/ico_arrow_fff_84x84.png" class="bnr_arr">
+                </a>
+                <button class="top_event_close" alt="배너 끄기"></button>
+            </div>
+            <div class="inner_top_event login">
+                <a href="#" alt="친구 초대하고 적립금 5천원 받기" class="top_event_bnr login">
+                    친구 초대하면 친구도 나도 적립금
+                    <strong class="b">5천원!</strong>
+                    <img src="https://res.kurly.com/pc/ico/1908/ico_arrow_333_84x84.png" class="bnr_arr">
+                </a>
+                <button class="top_event_close login" alt="배너 끄기"></button>
+            </div>
+        </div>
+		<!-- id="top_event" -->
+
+		<div id="header">
+            <div class="user_menu">
+                <!-- bnr = banner -->
+                <a href="#" class="bnr_delivery">
+                    <img src="https://res.kurly.com/pc/service/common/1908/delivery_190819.gif"
+                    alt="서울, 경기, 인천 샛별배송, 수도권 이외 지역 택배배송"
+                    class="bnr_delivery_img">
+                </a>
+                <ul class="sign_menu"> <!--login class 추가-->
+                    <li class="link">
+                        <a href="#" class="item after join">회원가입</a>
+                    </li>
+                    <li class="link">
+                        <a href="#" class="item after login_none">로그인</a>
+                        <a class="item login login_check grade_comm">
+                            <span class="ico_grade grade0">일반</span>
+                            <span class="txt">
+                                <span class="name"></span>
+                                <span class="sir">님</span>
+                            </span>
+                        </a>
+                        <ul class="sub">
+                            <li class="list">
+                                <a href="#" class="list_item">주문 내역</a>
+                            </li>
+                            <li class="list">
+                                <a href="#" class="list_item">배송지 관리</a>
+                            </li>
+                            <li class="list">
+                                <a href="#" class="list_item">개인 정보 수정</a>
+                            </li>
+                            <li class="list">
+                                <a href="#" class="list_item">로그아웃</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="link">
+                        <a href="#" class="item service">고객센터</a>
+                        <!-- 고객센터 hover 시 sub_menu 등장 -->
+                        <ul class="sub_menu">
+                            <li class="list">
+                                <a href="#" class="list_item">공지사항</a>
+                            </li>
+                            <li class="list">
+                                <a href="#" class="list_item">자주하는 질문</a>
+                            </li>
+                            <li class="list">
+                                <a href="#" class="list_item">1:1 문의</a>
+                            </li>
+                            <li class="list">
+                                <a href="#" class="list_item">상품 제안</a>
+                            </li>
+                            <li class="list">
+                                <a href="#" class="list_item">에코포장 피드백</a>
+                            </li>
+                        </ul>
+                    </li> 
+                </ul>
+                <!-- .sign_menu -->
+            </div>
+            <div class="header_logo">
+                <h1 class="logo">
+                    <a href="common.html" class="link_main">
+                        <span class="gnb_logo_container"></span>
+                        <img src="https://res.kurly.com/images/marketkurly/logo/logo_x2.png" alt="마켓컬리 로고" class="logo_img">
+                    </a>
+                </h1>
+            </div>
+            <div class="gnb">
+            <!-- gnb = global nav bar = 최상위 메뉴  -->
+                <h2 class="blind">메뉴</h2>
+                    <ul class="gnb_menu">
+                        <li class="list gnb_main">
+                            <a href="#" class="link">
+                                <span class="ico"></span>
+                                <!-- ico는 css에서 bg url로 처리 -->
+                                <span class="txt">전체 카테고리</span>
+                            </a>
+                            <div class="gnb_sub">
+                                <ul class="menu">
+                                    <li class="current">
+                                        <!-- hover나 active시 current가 옮겨가도록 설정해야 함 -->
+                                        <a href="#" class="main_item">
+                                            <span class="ico">
+                                                <img src="https://img-cf.kurly.com/shop/data/category/icon_newyear_inactive_pc@2x.1609722514.png" alt="" class="ico off">
+                                                <img src="https://img-cf.kurly.com/shop/data/category/icon_newyear_active_pc@2x.1609722514.png" alt="" class="ico on">
+                                                <!--카테고리 별 아이콘은 직관적이게 img src로 바로 삽입 
+                                                클릭X(off): 기본, 클릭(on): 보라색 아이콘-->
+                                            </span>
+                                            <span class="tit">
+                                                <span class="txt">블라블라블라</span>
+                                                <span class="ico_new" alt="new"></span>
+                                                <!-- ico_nex: bg url로 처리 -->
+                                            </span>
+                                            <!-- tit: text + ico -->
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="main_item">
+                                            <span class="ico">
+                                                <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_inactive_pc@2x.1586324570.png" alt="" class="ico off">
+                                                <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_active_pc@2x.1586324570.png" alt="" class="ico on">
+                                                <!--카테고리 별 아이콘은 직관적이게 img src로 바로 삽입 
+                                                                                        클릭X(off): 기본, 클릭(on): 보라색 아이콘-->
+                                            </span>
+                                            <span class="tit">
+                                                <span class="txt">블라블라블라</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="main_item">
+                                            <span class="ico">
+                                                <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_inactive_pc@2x.1586324570.png" alt=""
+                                                    class="ico off">
+                                                <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_active_pc@2x.1586324570.png" alt=""
+                                                    class="ico on">
+                                                <!--카테고리 별 아이콘은 직관적이게 img src로 바로 삽입 
+                                                                                                                            클릭X(off): 기본, 클릭(on): 보라색 아이콘-->
+                                            </span>
+                                            <span class="tit">
+                                                <span class="txt">블라블라블라</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="main_item">
+                                            <span class="ico">
+                                                <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_inactive_pc@2x.1586324570.png" alt=""
+                                                    class="ico off">
+                                                <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_active_pc@2x.1586324570.png" alt=""
+                                                    class="ico on">
+                                                <!--카테고리 별 아이콘은 직관적이게 img src로 바로 삽입 
+                                                                                                                            클릭X(off): 기본, 클릭(on): 보라색 아이콘-->
+                                            </span>
+                                            <span class="tit">
+                                                <span class="txt">블라블라블라</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="main_item">
+                                            <span class="ico">
+                                                <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_inactive_pc@2x.1586324570.png" alt=""
+                                                    class="ico off">
+                                                <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_active_pc@2x.1586324570.png" alt=""
+                                                    class="ico on">
+                                                <!--카테고리 별 아이콘은 직관적이게 img src로 바로 삽입 
+                                                                                                                            클릭X(off): 기본, 클릭(on): 보라색 아이콘-->
+                                            </span>
+                                            <span class="tit">
+                                                <span class="txt">블라블라블라</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="main_item">
+                                            <span class="ico">
+                                                <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_inactive_pc@2x.1586324570.png" alt=""
+                                                    class="ico off">
+                                                <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_active_pc@2x.1586324570.png" alt=""
+                                                    class="ico on">
+                                                <!--카테고리 별 아이콘은 직관적이게 img src로 바로 삽입 
+                                                                                                                            클릭X(off): 기본, 클릭(on): 보라색 아이콘-->
+                                            </span>
+                                            <span class="tit">
+                                                <span class="txt">블라블라블라</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="main_item">
+                                            <span class="ico">
+                                                <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_inactive_pc@2x.1586324570.png" alt=""
+                                                    class="ico off">
+                                                <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_active_pc@2x.1586324570.png" alt=""
+                                                    class="ico on">
+                                                <!--카테고리 별 아이콘은 직관적이게 img src로 바로 삽입 
+                                                                                                                            클릭X(off): 기본, 클릭(on): 보라색 아이콘-->
+                                            </span>
+                                            <span class="tit">
+                                                <span class="txt">블라블라블라</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="main_item">
+                                            <span class="ico">
+                                                <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_inactive_pc@2x.1586324570.png" alt=""
+                                                    class="ico off">
+                                                <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_active_pc@2x.1586324570.png" alt=""
+                                                    class="ico on">
+                                                <!--카테고리 별 아이콘은 직관적이게 img src로 바로 삽입 
+                                                                                                                            클릭X(off): 기본, 클릭(on): 보라색 아이콘-->
+                                            </span>
+                                            <span class="tit">
+                                                <span class="txt">블라블라블라</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="main_item">
+                                            <span class="ico">
+                                                <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_inactive_pc@2x.1586324570.png" alt=""
+                                                    class="ico off">
+                                                <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_active_pc@2x.1586324570.png" alt=""
+                                                    class="ico on">
+                                                <!--카테고리 별 아이콘은 직관적이게 img src로 바로 삽입 
+                                                                                                                            클릭X(off): 기본, 클릭(on): 보라색 아이콘-->
+                                            </span>
+                                            <span class="tit">
+                                                <span class="txt">블라블라블라</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="main_item">
+                                            <span class="ico">
+                                                <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_inactive_pc@2x.1586324570.png" alt=""
+                                                    class="ico off">
+                                                <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_active_pc@2x.1586324570.png" alt=""
+                                                    class="ico on">
+                                                <!--카테고리 별 아이콘은 직관적이게 img src로 바로 삽입 
+                                                                                                                            클릭X(off): 기본, 클릭(on): 보라색 아이콘-->
+                                            </span>
+                                            <span class="tit">
+                                                <span class="txt">블라블라블라</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="main_item">
+                                            <span class="ico">
+                                                <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_inactive_pc@2x.1586324570.png" alt=""
+                                                    class="ico off">
+                                                <img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_active_pc@2x.1586324570.png" alt=""
+                                                    class="ico on">
+                                                <!--카테고리 별 아이콘은 직관적이게 img src로 바로 삽입, 클릭X(off): 기본, 클릭(on): 보라색 아이콘-->
+                                            </span>
+                                            <span class="tit">
+                                                <span class="txt">블라블라블라</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="list">
+                            <a href="#" class="link">
+                                <span class="txt">신상품</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="#" class="link">
+                                <span class="txt">베스트</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="#" class="link">
+                                <span class="txt">알뜰쇼핑</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="#" class="link">
+                                <span class="txt">금주혜택</span>
+                            </a>
+                        </li>
+
+                        <div class="gnb_search">
+							<form action="" onsubmit="return searchTracking(this)">
+								<input name="sword" type="text" id value required="required" label="검색어" class="inp_search">
+                                <input type="image" src="https://res.kurly.com/pc/service/common/1908/ico_search_x2.png" class="btn_search">
+                                <div class="init">
+                                    <button type="button" id="search_init" class="btn_delete">검색어 삭제하기</button>
+                                </div>
+                            </form>
+                        </div>
+                            
+                        <div class="location_login">
+                            <!-- 버튼 뒤로 넘기기, 가상요소 선택자로 bg url 아이콘 처리-->
+                            <button type="button" class="btn_location on">배송지 등록</button>
+                            
+                            <div class="location_notice">
+                                <!-- 첫 홈페이지 화면에 몇 초간 notice 띄우고 자동으로 off -->
+                                <span class="emph">배송지를 등록</span>하고<br>
+                                <span class="txt">구매가능한 상품을 확인하세요!</span>
+                                <div class="group_button">
+                                    <button type="button" class="btn login">로그인</button>
+                                    <button type="button" class="btn search_address">
+                                        <span class="ico"></span>
+                                        주소검색
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cart_count">
+                            <!-- bg url 아이콘 추가 -->
+                            <a href="#" class="btn_cart">
+                                <span class="blind">장바구니</span>
+                            </a>
+                        </div>    
+                    </ul>
+			</div>
+			
+			<div class="tit_page">
+				<h2 class="tit">상품검색</h2>
+			</div>
+        </div>
+		<!-- id ="header" -->
+		
+		<div id="main">
+			<div id="content">
+				<div id="qnb" class="quick-navition">
+					<div class="bnr_qnb" id="brnQuick">
+						<a href="/shop/event/kurlyEvent.php?htmid=event/2021/0115/newyearsday" id="brnQuickObj">
+							<img class="thumb" src="https://res.kurly.com/pc/service/main/2101/bnr_quick.png" alt="2021 설 선물">
+						</a>
+					</div>
+
+					<div class="side_menu">
+						<a href="#" class="link_menu">등급별 혜택</a>
+						<a href="#" class="link_menu">레시피</a>
+						<a href="#" class="link_menu">베스트 후기</a>
+					</div>
+				</div>
+
+				<div class="top_btn">
+					<button id="go-top" alt="맨 위로가기"></button>
+				</div>
+
+				<div class="page_aticle page_search">
+					<form name="frmList" onsubmit="return searchTracking(this)">
+						<input type="hidden" name="searched" value="Y"> <!--먼지 모르겠음-->
+
+						<div class="search_box">
+							<div class="tit">
+								<label	label for="sword">검색 조건</label>
+							</div>
+							<div class="desc">
+								<input type="text" name="sword" id="sword" class="inp" value="">
+								<input type="submit" class="styled-button btn_search" value="검색하기">
+							</div>
+						</div>
+					</form>
+					
+					<div id="goodsList" class="page_section section_goodslist">
+						<p class="search_result">
+							<strong class="emph">총 <span></span> 개</strong>의 상품이 검색되었습니다.
+						</p>
+
+						<div class="list_goods">
+							<div class="inner_listgoods">
+								<ul class="list">
+									<li>
+										<div class="item">
+											<div class="thumb">
+												<a class="img" style="background-image: url('https://img-cf.kurly.com/shop/data/goods/1530172373295l0.jpg');">
+													<span class="global_sticker">
+														<span class="inner_sticker">
+															<span class="bg_sticker" style="background-color: rgb(189, 118, 255); opacity: 0.9;"></span>
+															<span class="txt_sticker">
+																<span>
+																	<span class="emph_sticker">농할쿠폰20%</span>
+																</span>
+															</span>
+														</span>
+													</span>
+													<img src="https://img-cf.kurly.com/shop/data/goods/1530172373295l0.jpg" alt="믿고 먹을 수 있는 상품을 합리적인 가격에, KF365" width="308" height="396">
+												</a>
+	
+												<div class="group_btn">
+													<button type="button" class="btn btn_cart2">
+														<span class="blind"></span>
+													</button>
+												</div>
+											</div>
+											
+											<a class="info">
+												<span class="name">[KF365] 감자 1kg</span>
+												<span class="cost">
+													<span class="price">2,500</span> 
+                                                    <span class="won">원</span>
+                                                    <input type="hidden" value="2500" class="value"> <!-- 백앤드에서 상품가격 value 에 넣어줘야됨-->
+												</span>
+												<span class="desc">맛있는 감자에요</span>
+												<span class="tag"></span>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="item">
+											<div class="thumb">
+												<a class="img" style="background-image: url('https://img-cf.kurly.com/shop/data/goods/1530172373295l0.jpg');">
+													<span class="global_sticker">
+														<span class="inner_sticker">
+															<span class="bg_sticker" style="background-color: rgb(189, 118, 255); opacity: 0.9;"></span>
+															<span class="txt_sticker">
+																<span>
+																	<span class="emph_sticker">농할쿠폰20%</span>
+																</span>
+															</span>
+														</span>
+													</span>
+													<img src="https://img-cf.kurly.com/shop/data/goods/1530172373295l0.jpg" alt="믿고 먹을 수 있는 상품을 합리적인 가격에, KF365" width="308" height="396">
+												</a>
+	
+												<div class="group_btn">
+													<button type="button" class="btn btn_cart2">
+														<span class="blind"></span>
+													</button>
+												</div>
+											</div>
+											
+											<a class="info">
+												<span class="name">[KF365] 고구마 1kg</span>
+												<span class="cost">
+													<span class="price">3,000</span> 
+                                                    <span class="won">원</span>
+                                                    <input type="hidden" value="3000" class="value"> <!-- 백앤드에서 상품가격 value 에 넣어줘야됨-->
+
+												</span>
+												<span class="desc">몸에 좋은 고구마</span>
+												<span class="tag"></span>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="item">
+											<div class="thumb">
+												<a class="img" style="background-image: url('https://img-cf.kurly.com/shop/data/goods/1530172373295l0.jpg');">
+													<span class="global_sticker">
+														<span class="inner_sticker">
+															<span class="bg_sticker" style="background-color: rgb(189, 118, 255); opacity: 0.9;"></span>
+															<span class="txt_sticker">
+																<span>
+																	<span class="emph_sticker">농할쿠폰20%</span>
+																</span>
+															</span>
+														</span>
+													</span>
+													<img src="https://img-cf.kurly.com/shop/data/goods/1530172373295l0.jpg" alt="믿고 먹을 수 있는 상품을 합리적인 가격에, KF365" width="308" height="396">
+												</a>
+	
+												<div class="group_btn">
+													<button type="button" class="btn btn_cart2">
+														<span class="blind"></span>
+													</button>
+												</div>
+											</div>
+											
+											<a class="info">
+												<span class="name">수박</span>
+												<span class="cost">
+													<span class="price">10,000</span> 
+                                                    <span class="won">원</span>
+                                                    <input type="hidden" value="10000" class="value"> <!-- 백앤드에서 상품가격 value 에 넣어줘야됨-->
+												</span>
+												<span class="desc">여름엔 수박이지</span>
+												<span class="tag"></span>
+											</a>
+										</div>
+									</li>
+                                    
+	
+	
+								</ul>
+							</div>
+						</div>
+
+						<div class="layout-pagination">
+							<div class="pagediv">
+								<a href="#main" class="layout-pagination-button layout-pagination-first-page">맨 처음 페이지로 가기</a>
+								<a href="#main" class="layout-pagination-button layout-pagination-prev-page">이전 페이지로 가기</a>
+								<span>
+									<strong class="layout-pagination-button layout-pagination-number active">1</strong>
+									<!-- active 클래스가 붙어있을 때 -->
+								</span>
+								<a href="#main" class="layout-pagination-button layout-pagination-next-page">다음 페이지로 가기</a>
+								<a href="#main" class="layout-pagination-button layout-pagination-last-page">맨 끝 페이지로 가기</a>
+							</div>
+						</div>
+					</div>
+
+
+
+
+				</div>
+
+				<div class="bg_loading" id="bgLoading">
+					<div class="loading_show"></div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		<div id="footer">
+            <div class="inner_footer">
+                <div class="cc_footer">
+                <!-- cc = company calls --> 
+                    <h2 class="cc_tit">고객행복센터</h2>
+                    <div class="cc_view cc_call">
+                        <h3>
+                            <span class="tit">1644-1107</span>
+                        </h3>
+                        <dl class="list">
+                            <dt>365고객센터</dt>
+                            <dd>오전 7시 - 오후 7시</dd>
+                        </dl>
+                    </div>
+                    <div class="cc_view cc_kakao">
+                        <h3>
+                            <a href="#" class="tit">카카오톡 문의</a>
+                        </h3>
+                        <dl class="list">
+                            <dt>365고객센터</dt>
+                            <dd>오전 7시 - 오후 7시</dd>
+                        </dl>
+                    </div>
+                    <div class="cc_view cc_qna">
+                        <h3>
+                            <a href="#" class="tit">1:1 문의</a>
+                        </h3>
+                        <dl class="list">
+                            <dt>24시간 접수 가능</dt>
+                            <dd>고객센터 운영시간에 순차적으로 답변해드리겠습니다.</dd>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="company_info">
+                    <ul class="list">
+                        <li>
+                            <a href="#" class="link">컬리소개</a>
+                        </li>
+                        <li>
+                            <a href="#" class="link">컬리소개영상</a>
+                        </li>
+                        <li>
+                            <a href="#" class="link">인재채용</a>
+                        </li>
+                        <li>
+                            <a href="#" class="link">이용약관</a>
+                        </li>
+                        <li>
+                            <a href="#" class="link">개인정보처리방침</a>
+                        </li>
+                        <li>
+                            <a href="#" class="link">이용안내</a>
+                        </li>
+                    </ul>
+                    <div class="spec_info">
+                        법인명 (상호) : 주식회사 컬리
+                        <span class="bar">I</span>
+                        사업자등록번호 : 000-00-0000 
+                        <a href="#" class="link">사업자정보확인</a><br>
+                        통신판매업 : 제 2018-서울강남-00000 호
+                        <span class="bar">I</span>
+                        개인정보보호책임자 : 000 <br>
+                        주소 : 서울시 도산대로 16길 20, 이래빌딩 B1 ~ 4F
+                        <span class="bar">I</span>
+                        대표이사 : 000 <br>
+                        입점문의 : <a href="#" class="link">입점문의하기</a>
+                        제휴문의 : <a href="#" class="link">ghkdvnfld345@naver.com</a><br>
+                        채용문의 : <a href="#" class="link">ghkdvnfld345@naver.com</a><br>
+                        팩스 : 000 - 0000 - 0000
+                        <span class="bar">I</span>
+                        이메일 : <a href="#" class="link">ghkdvnfld345@naver.com</a><br>
+                        <br>
+                        <strong class="copy">© KURLY CORP. ALL RIGHTS RESERVED</strong>
+                        <ul class="sns">
+                            <li>
+                                <a href="#" class="link_sns insta" target="_blank">
+                                    <img src="https://res.kurly.com/pc/ico/1810/ico_instagram.png" alt="마켓컬리 인스타그램 바로가기">
+                                </a>
+                                <!-- bg url 넣기 -->
+                            </li>
+                            <li>
+                                <a href="#" class="link_sns fb" target="_blank">
+                                    <img src="https://res.kurly.com/pc/ico/1810/ico_fb.png" alt="마켓컬리 페이스북 바로가기">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link_sns naver_blog" target="_blank">
+                                    <img src="https://res.kurly.com/pc/ico/1810/ico_blog.png" alt="마켓컬리 네이버블로그 바로가기">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link_sns naver_post" target="_blank">
+                                    <img src="https://res.kurly.com/pc/ico/1810/ico_naverpost.png" alt="마켓컬리 포스트 바로가기">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link_sns yt" target="_blank">
+                                    <img src="https://res.kurly.com/pc/ico/1810/ico_youtube.png" alt="마켓컬리 유튜브 바로가기">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="link_footer">
+                <div class="authentication">
+                    <a href="#" class="mark" target="_blank">
+                        <img src="https://res.kurly.com/pc/ico/2001/logo_isms.png" alt="isms 로고" class="logo">
+                        <p class="txt">
+                            [인증범위] 마켓컬리 쇼핑몰 서비스 개발 · 운영<br>
+                            [유효기간] 2019.04.01 ~ 2022.03.31
+                        </p>
+                    </a>
+                    <a href="#" class="mark" target="_blank">
+                        <img src="https://res.kurly.com/pc/ico/2001/logo_eprivacyplus.png" alt="eprivacy plus 로고" class="logo">
+                        <p class="txt">
+                            개인정보보호 우수 웹사이트 ·<br>
+                            개인정보처리시스템 인증 (ePRIVACY PLUS)
+                        </p>
+                    </a>
+                    <a href="#" class="lguplus mark" target="_blank">
+                        <img src="https://res.kurly.com/pc/service/main/2009/logo_payments.png" alt="payments 로고" class="logo">
+                        <p class="txt">
+                            고객님의 안전거래를 위해 현금 등으로 결제 시 저희 쇼핑몰에서 가입한<br>
+                            토스 페이먼츠 구매안전(에스크로) 서비스를 이용하실 수 있습니다.
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- id="footer" -->
+	</div>
+    <!-- id="wrap"-->
+    
+    <div id="cartPut">
+        <div id="" class="cart_option cartList cart_type1">
+            <form action mathod="POST" id="contactsForm">
+                <input type="hidden" name="csrfmiddlewaretoken" value="fkidl2oy2p7Xpln3vWOCFlPAhMgvR0xmy3Mf32y7nuXxgRiF4vloOp7sYJkeOFy7">
+                <div class="inner_option">
+                    <button type="button" class="btn_close1">레이어닫기</button>
+                    <!-- <strong class="tit_cart">[퀸나] 티파니 에어프라이어 2.3L 2종 QN-AF23W</strong> -->
+                    <div class="in_option">
+                        <div class="list_goods">
+                            <ul class="list list_nopackage"> <!--그냥 list와 list_nopackage로 나뉨-->
+                                <li class="on">
+                                    
+                                    <span class="name">[KF365] 감자 1kg</span>
+                                    <div class="option">
+                                        <span class="count">
+                                            <button type="button" class="btn down on">수량내리기</button>
+                                            <input type="text" readonly="readonly" class="inp" value = 1>
+                                            <button type="button" class="btn up on">수량올리기</button>
+                                        </span>
+                                        <span class="price">
+                                            <span class="dc_price">2,500원</span>
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="total">
+                            <div class="price">
+                                <strong class="tit">합계</strong>
+                                <span class="sum">
+                                    <span class="num">2,500</span>
+                                    <span class="won">원</span>
+                                </span>
+                            </div>
+                            <p class="txt_point">
+                                <span class="ico">적립</span>
+                                <span class="no_login hide"> <!--로그인 안된 상태(기본), 로그인 후엔 hide 클래스 추가-->
+                                    <span>로그인 후, 적립혜택 제공</span>
+                                </span>
+                                <span class="point show">구매 시 <!--로그인 되었을 때 show 클래스 추가-->
+                                    <strong class="emph"></strong>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="group_btn off layer_btn2">
+                        <span class="btn_type2">
+                            <button type="button" class="txt_type">취소</button>
+                        </span>
+                        <span class="btn_type1">
+                            <button type="button" class="txt_type">장바구니 담기</button>
+                        </span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- id="cartPut" -->
+
+</body>
