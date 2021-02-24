@@ -15,10 +15,6 @@
     transition: all .5s;
 }
 
-.bg_loading.loading {
-    display: block;
-}
-
 .bg_loading {
     display: none;
     position: fixed;
@@ -41,6 +37,15 @@
     height: 32px;
     background: url(https://res.kurly.com/pc/img/1909/img_loading_128x128.gif) no-repeat 50% 50%;
     background-size: 16px 16px;
+}
+
+.bg_loading.show {
+    display: block;
+}
+
+.bg_loading.hide {
+    display: none;
+    opacity: 0;
 }
 
 .fixed_bg {
@@ -73,6 +78,46 @@
     -webkit-transform: translate(0,-50%);
     -ms-transform: translate(0,-50%);
     transform: translate(0,-50%);
+    display: none;
+}
+
+#cartPut .cart_type3.show {
+    display: block;
+    -webkit-animation: fade-in 2s;
+    animation: fade-in 2s;
+    animation-fill-mode: forwards;
+}
+
+@webkit-keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+#cartPut .cart_type3.hide {
+    display: none;
+    opacity: 0;
 }
 
 #cartPut .cart_type3 .inner_option {
@@ -88,7 +133,7 @@
     width: 44px;
     height: 38px;
     border: 0;
-    background: url(https://res.kurly.com/mobile/service/common/1910/ico_close_333_88x76.png) no-repeat 50% 50%;
+    background: url(https://res.kurly.com/mobile/service/common/1910/ico_close_333_88x7d.png) no-repeat 50% 50%;
     background-size: 44px 38px;
     font-size: 0;
     line-height: 0;
@@ -899,7 +944,8 @@ active 클래스가 붙었을 때 layout-main-wrapper 클래스 스타일에 ove
     line-height: 16px;
 }
 
-#goodsList .list_goods .cost .dc {
+#goodsList .list_goods .cost .dc,
+#goodsList .list_goods .cost .percent  {
     font-weight: 700;
     font-size: 14px;
     color: #fa622f;

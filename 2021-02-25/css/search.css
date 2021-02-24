@@ -509,7 +509,7 @@
 #cartPut .cart_type1.show {
     display: block;
     -webkit-animation: fade-in 1s;
-    animation: fade-in 1s;
+    animation: fade-in 2s;
     animation-fill-mode: forwards;
 }
 
