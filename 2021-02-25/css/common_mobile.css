@@ -150,8 +150,6 @@
     background-image: url(https://res.kurly.com/mobile/service/common/2011/ico_search.svg?ver=2);
 }
 
-
-
 .menu_shortcut li:last-child {
     float: none;
     width: auto;
@@ -167,6 +165,10 @@
 
 .menu_shortcut .on.shortcut_mypage:before {
     background-image: url(https://res.kurly.com/mobile/service/common/2011/ico_mypage_on.svg?ver=2);
+}
+
+.menu_shortcut .on.shortcut_search:before {
+    background-image: url(https://res.kurly.com/mobile/service/common/2011/ico_search_on.svg?ver=2);
 }
 
 body #header_purple{
