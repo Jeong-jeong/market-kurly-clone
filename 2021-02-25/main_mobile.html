@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="./css/reset.css">
         <link rel="stylesheet" href="./css/common_mobile.css">
         <link rel="stylesheet" href="./css/main_mobile.css">
+        <link rel="stylesheet" href="./css/search_mobile.css">
         <!-- swiper -->
         <link rel="stylesheet" href="./swiper/swiper-bundle.css">
         <link rel="stylesheet" href="./swiper/swiper-bundle.min.css">
@@ -43,9 +44,49 @@
 
         <div id="wrap" class="layout-main-wrapper" style="padding-top: 133px;">
             
+
             <div class="top_btn">
                 <button id="m-go-top" alt="맨 위로가기"></button>
             </div>
+
+            <aside id="search-menu" class="layout-search-area">
+                <!-- 모바일 검색창 -->
+                    <div class="layer_search">
+                        <form action="" class="layout-search-form" id="search-form" autocomplete="off">
+                            <fieldset class="layout-search-fieldset">
+                                    <legend hidden>검색어 입력</legend>
+                                    <input type="search" name="kw" id="sword" class="inp_search" placeholder="검색어를 입력해주세요." value="따뜻한 나라로 떠나는 해외미식여행" required>
+                                <button type="button" class="btn_del" id="searchDelete">삭제</button> <!--input 값 있을 때 on 클래스 붙음-->
+                                <button class="layout-search-close-button" type="button" id="search-area-close">닫기</button>
+                            </fieldset>
+                        </form>
+                        <div class="layout-search-container" id="search-keyword-area">
+                            <ul class="layout-search-tab" id="search-keyword-tab">
+                                <li class="layout-search-tab-item">
+                                    <a href="#early-keyword" class="tab_search __active"> <!--active 되었을 때 글씨 색, 하단 bar 변경-->
+                                        최근 검색어
+                                        <span class="bar"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="layout-search-wrapper __active" id="early-keyword">
+                                <div class="layout-search-scroller" style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+                                    <div class="layout-search-content">
+                                        <ul class="layout-search-result-list layout-search-early-list">
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                                <template id="search-early-item-template"> <!--최근 검색어 list-->
+                                    <li class="item">
+                                        <a href="#" class="link" data-keyword="" data-style="recent"></a>
+                                        <button class="btn_del" data-index="">이 검색어를 삭제하기</button>
+                                    </li>
+                                </template>
+                            </div> 
+                        </div>
+                    </div>
+            </aside>
             
             <div id="appBanner">
                 <a href="#" id="eventLanding" class="link">
@@ -56,6 +97,7 @@
                 <button id="bnrHeaderClose" class="btn_close">가입하고 혜택받기</button>
             </div>
 
+            
 
             <header id="header_purple" class="header_purple" style="top: 38px;"> 
                 <h1 class="logo">

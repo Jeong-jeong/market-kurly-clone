@@ -31,7 +31,7 @@
 		</div>
 
 		<div id="cartPut">
-			<div class="cart_option cartList cart_type3"> <!--off 클래스가 붙으면 display: none-->
+			<div class="cart_option cartList cart_type3">
 				<div class="inner_option">
 					<button type="button" class="btn_close1">레이어닫기</button>
 					<div class="in_option">
@@ -94,7 +94,7 @@
 		<aside id="search-menu" class="layout-search-area">
             <!-- 모바일 검색창 -->
                 <div class="layer_search">
-                    <form action="" class="layout-search-form" id="search-form" autocomplete="off" onsubmit="return searchKw();">
+                    <form action="" class="layout-search-form" id="search-form" autocomplete="off">
                         <fieldset class="layout-search-fieldset">
                             <legend hidden>검색어 입력</legend> <!--hidden 속성을 통해 숨길 수 있음-->
                             <input type="search" name="kw" id="sword" class="inp_search" placeholder="검색어를 입력해주세요." value="따뜻한 나라로 떠나는 해외미식여행" required>
@@ -116,11 +116,11 @@
                                 <div class="layout-search-content">
                                     <ul class="layout-search-result-list layout-search-early-list">
                                         <li class="item">
-                                            <a href="#" class="link" data-keyword="" data-style="recent">0</a>
+                                            <a href="#" class="link" data-keyword="0" data-style="recent">0</a>
                                             <button class="btn_del" data-index="0">이 검색어를 삭제하기</button>
                                         </li>
                                         <li class="item">
-                                            <a href="#" class="link" data-keyword="" data-style="recent">1</a>
+                                            <a href="#" class="link" data-keyword="1" data-style="recent">1</a>
                                             <button class="btn_del" data-index="1">이 검색어를 삭제하기</button>
                                         </li>
                                     </ul>
@@ -204,7 +204,7 @@
 			</div>
 			<div class="list_goods">
 				<ul class="list">
-					<li>
+					<li class="list_item">
 						<div class="item">
 							<div class="thumb">
 								<a class="img" style="background-image: url('https://img-cf.kurly.com/shop/data/goods/161284575655l0.jpg');">
@@ -227,7 +227,7 @@
 							</div>
 						</div>
 					</li>
-					<li>
+					<li class="list_item">
 						<div class="item">
 							<div class="thumb">
 								<a class="img" style="background-image: url('');"><!--상품 이미지 넣기-->
