@@ -27,12 +27,23 @@ $(document).ready(function(){
         }
         $('.shortcut_mypage').addClass('on');
     });
-
-
-
-
-
 });
+
+
+
+// 페이지 로딩 시 로딩바 구현
+// 로딩 확인
+document.addEventListener('readystatechange', () => console.log(document.readyState));
+$(document).ready(function() {
+    $('#bgLoading').hide();
+
+    $('#bgLoading').ajaxStart(function () {
+        $(this).fadeIn(500);
+    }) .ajaxStop(function () {
+        $(this).fadeOut(300);
+    })
+})
+
 
 // aside 검색창은 공통부분으로 common_mobile.js에 넣었습니다!
 // >> 카테고리 html 파일에 <aside id="search-menu" class="layout-search-area"> 이부분 넣어주시면 돼요!

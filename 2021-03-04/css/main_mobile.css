@@ -27,6 +27,15 @@ html, body {
     z-index: 200;
     background-color: #fff;
     text-align: center;
+    -webkit-transform: translateY(0);
+    -webkit-transition: -webkit-transform 1s;
+    transform: translateY(0);
+    transition: transform 1s;
+}
+
+#appBanner.move {
+    -webkit-transform: translateY(-38px);
+    transform: translateY(-38px);
 }
 
 #appBanner .link {
@@ -70,6 +79,17 @@ html, body {
     text-indent: -9999px; /*텍스트만 안보이게*/
 }
 
+#header_purple {
+    -webkit-transform: translateY(0);
+    -webkit-transition: -webkit-transform 1s;
+    transform: translateY(0);
+    transition: transform 1s;
+}
+
+#header_purple.move {
+    -webkit-transform: translateY(-38px);
+    transform: translateY(-38px);
+}
 
 #header_purple .logo .gnbLogoContainer {
 	margin: 0 auto;
@@ -93,6 +113,15 @@ html, body {
     color: #333;
     line-height: 1.5;
     letter-spacing: 0;
+    -webkit-transform: translateY(0);
+    -webkit-transition: -webkit-transform 1s;
+    transform: translateY(0);
+    transition: transform 1s;
+}
+
+#lnbMenu.move {
+    -webkit-transform: translateY(-38px);
+    transform: translateY(-38px);
 }
 
 #lnbMenu .inner_lnb {

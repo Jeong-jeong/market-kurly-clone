@@ -4,6 +4,7 @@
 
 /* 로그인 클래스 추가 /삭제 */
 /* 로그인: #top_event */
+
 #top_event .inner_top_event.login {
     display: none;
 }
@@ -172,15 +173,34 @@
     min-height: 100%;
     /* 임시 height 값 */
     margin: 0 auto;
+    -webkit-transform: translateY(0);
+    -webkit-transition: -webkit-transform 1s;
+    transform: translateY(0);
+    transition: transform 1s;
+}
+
+#wrap.move {
+    -webkit-transform: translateY(-42px);
+    transform: translateY(-42px);
 }
 
 /* header */
+
 #top_event {
     position: relative;
     min-width: 1050px;
     height: 42px;
-    background-color: #5f0080;
+    background-color: #885798;
     z-index: 999;
+    -webkit-transform: translateY(0);
+    -webkit-transition: -webkit-transform 1s;
+    transform: translateY(0);
+    transition: transform 1s;
+}
+
+#top_event.move {
+    -webkit-transform: translateY(-42px);
+    transform: translateY(-42px);
 }
 
 #top_event .inner_top_event {
