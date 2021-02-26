@@ -30,3 +30,12 @@ top_bnr_close.addEventListener('click', function() {
 	header.classList.add('move');
 	lnb.classList.add('move');
 });
+
+// 로딩 시 3초간 안내메세지 구현
+const location_status = document.querySelector('.location_status');
+window.addEventListener('load', function() {
+    location_status.classList.add('active');
+    setTimeout(function() {
+        location_status.classList.remove('active');
+    }, 3000);
+});

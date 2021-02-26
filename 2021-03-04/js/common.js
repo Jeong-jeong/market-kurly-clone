@@ -14,6 +14,16 @@ top_event_close.addEventListener('click', function() {
     main_wrap.classList.add('move');  
 })
 
+// 로딩 시 3초 간 안내메세지 
+const location_login = document.querySelector('.location_login');
+const location_notice = location_login.querySelector('.location_notice');
+window.addEventListener('load', function() {
+    location_login.classList.add('active');
+    setTimeout(function() {
+        location_login.classList.remove('active');
+    }, 3000);
+});
+
 
 // gnb 상단 고정 구현
 const gnb = document.querySelector('.gnb');

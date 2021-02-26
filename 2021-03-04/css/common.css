@@ -594,6 +594,7 @@
 
 .gnb .location_notice {
     display: none;
+    opacity: 0;
     position: absolute;
     right: 41px;
     top: 56px;
@@ -606,6 +607,26 @@
     font-size: 16px;
     color: #333;
     line-height: 24px;
+    -webkit-animation: visible .5s;
+    animation: visible .5s;
+}
+
+@-webkit-keyframes visible {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes visible {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .gnb .location_notice::after {
@@ -621,9 +642,11 @@
 
 
 .gnb .location_login .location_notice.on,
-.gnb .location_login:active .location_notice,
+.gnb .location_login.active .location_notice,
 .gnb .location_login:hover .location_notice {
     display: block;
+    opacity: 1;
+    
 }
 /* 포인터가 영역을 벗어나면 notice가 바로 사라져버림 
 >> z-index 추가해서 수정 완료*/

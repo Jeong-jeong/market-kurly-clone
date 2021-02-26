@@ -91,25 +91,14 @@ let product_value = []; //상품 갯수 바뀔 때 필요한 value값 리스트
     })(i);
   }
 
-// function comma(num){          //콤마찍는 함수
-// 	var len, point, str; 
-	   
-// 	num = num + "";  //number를 ""와 더해 문자열로 만듦.
-// 	point = num.length % 3 ; //number의 길이를 나눈 후 나머지를 저장. ex) 1000이라는 4글자를 3으로 나눠 나머지 1을 저장.
-// 	len = num.length; //number의 길이 저장
-   
-// 	str = num.substring(0, point); 
-// 	// substring() = 문자열 자르기 함수 (시작인덱스, 종료인덱스)
-// 	// * 문자열 = 배열
-// 	while (point < len) { 
-// 		if (str != "") str += ","; 
-// 		str += num.substring(point, point + 3); 
-// 		point += 3; 
-// 	} 
-	 
-// 	return str;
- 
-// }
+  // 로딩 시 3초간 안내메세지
+  const location_status = document.querySelector('.location_status');
+  window.addEventListener('load', function() {
+      location_status.classList.add('active');
+      setTimeout(function() {
+          location_status.classList.remove('active');
+      }, 3000);
+  });
 
 
 
