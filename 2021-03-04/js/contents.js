@@ -2,10 +2,11 @@
 
 // #go-top smooth 적용이 안됨 ㅠ
 // a 태그에 #값을 넣으면 top으로 가지만 smooth 적용 안됐던 것. > button으로 변경
+const commonGoTop = document.getElementById('go-top');
+
 let goTop = () => {
   // Scroll | button show/hide
   window.addEventListener('scroll', () => {
-    const commonGoTop = document.getElementById('go-top');
     if (document.querySelector('html, body').scrollTop > 1000) {
       commonGoTop.style.opacity = "1";
     } else {
@@ -13,7 +14,7 @@ let goTop = () => {
     }
   });
   // back to top
-  goTop.addEventListener('click', () => {
+  commonGoTop.addEventListener('click', () => {
     window.scrollTo({
       top: 0,
       left: 0,

@@ -17,6 +17,7 @@
 
 /* top 가는 버튼 */
 .page_aticle #go-top {
+    opacity: 0;
     position: fixed;
     z-index: 200;
     right: 31px;
