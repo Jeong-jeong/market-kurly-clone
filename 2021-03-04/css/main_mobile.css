@@ -5,6 +5,7 @@ html, body {
 }
 
 .top_btn #m-go-top {
+    opacity: 0;
     position: fixed;
     z-index: 39;
     right: 15px;
@@ -27,15 +28,13 @@ html, body {
     z-index: 200;
     background-color: #fff;
     text-align: center;
-    -webkit-transform: translateY(0);
-    -webkit-transition: -webkit-transform .5s;
-    transform: translateY(0);
-    transition: transform .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
 }
 
-#appBanner.move {
-    -webkit-transform: translateY(-38px);
-    transform: translateY(-38px);
+#appBanner.hide {
+    height: 0;
+    overflow: hidden;
 }
 
 #appBanner .link {
@@ -80,15 +79,13 @@ html, body {
 }
 
 #header_purple {
-    -webkit-transform: translateY(0);
-    -webkit-transition: -webkit-transform .5s;
-    transform: translateY(0);
-    transition: transform .5s;
+    top: 38px;
+    -webkit-transition: -all .5s;
+    transition: all .5s;
 }
 
 #header_purple.move {
-    -webkit-transform: translateY(-38px);
-    transform: translateY(-38px);
+    top: 0;
 }
 
 #header_purple .logo .gnbLogoContainer {
@@ -159,7 +156,7 @@ html, body {
 #lnbMenu {
     position: fixed;
 	overflow: hidden;
-    top: 50px;
+    top: 88px;
     left: 0;
     z-index: 12;
     width: 100%;
@@ -168,15 +165,12 @@ html, body {
     color: #333;
     line-height: 1.5;
     letter-spacing: 0;
-    -webkit-transform: translateY(0);
-    -webkit-transition: -webkit-transform .5s;
-    transform: translateY(0);
-    transition: transform .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
 }
 
 #lnbMenu.move {
-    -webkit-transform: translateY(-38px);
-    transform: translateY(-38px);
+    top: 50px;
 }
 
 #lnbMenu .inner_lnb {

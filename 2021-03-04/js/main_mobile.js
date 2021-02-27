@@ -1,10 +1,11 @@
 const mobile_goTop = () => {
 	// Scroll | button show/hide
 	window.addEventListener('scroll', () => {
+		const mGotop = document.getElementById('m-go-top');
 	  if (document.querySelector('html, body').scrollTop > 1000) {
-		document.getElementById('m-go-top').style.opacity = "1";
+		mGotop.style.opacity = "1";
 	  } else {
-		document.getElementById('m-go-top').style.opacity = "0";
+		mGotop.style.opacity = "0";
 	  }
 	});
 	// back to top
@@ -23,10 +24,10 @@ const top_bnr = document.querySelector('#appBanner');
 const top_bnr_close = top_bnr.querySelector('#bnrHeaderClose');
 const wrapp = document.querySelector('#wrap'); // padding-top: 95;
 const header = document.querySelector('#header_purple'); // top: 0
-const lnb = document.querySelector('#lnbMenu');
+const lnb = document.querySelector('#lnbMenu'); // top: 50
 top_bnr_close.addEventListener('click', function() {
-	top_bnr.classList.add('move');
 	wrap.style.paddingTop = '95px';
+	top_bnr.classList.add('hide');
 	header.classList.add('move');
 	lnb.classList.add('move');
 });

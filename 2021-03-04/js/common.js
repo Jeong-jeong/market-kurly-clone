@@ -7,12 +7,9 @@
 // top_bnr 삭제 구현
 const top_event = document.querySelector('#top_event');
 const top_event_close = document.querySelector('.top_event_close.login');
-const main_wrap = document.querySelector('#wrap');
 top_event_close.addEventListener('click', function() {
-    console.log('클릭');
-    top_event.classList.add('move');
-    main_wrap.classList.add('move');  
-})
+    top_event.classList.add('hide');
+});
 
 // 로딩 시 3초 간 안내메세지 
 const location_login = document.querySelector('.location_login');

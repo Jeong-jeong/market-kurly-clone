@@ -5,14 +5,15 @@
 let goTop = () => {
   // Scroll | button show/hide
   window.addEventListener('scroll', () => {
+    const commonGoTop = document.getElementById('go-top');
     if (document.querySelector('html, body').scrollTop > 1000) {
-      document.getElementById('go-top').style.opacity = "1";
+      commonGoTop.style.opacity = "1";
     } else {
-      document.getElementById('go-top').style.opacity = "0";
+      commonGoTop.style.opacity = "0";
     }
   });
   // back to top
-  document.getElementById('go-top').addEventListener('click', () => {
+  goTop.addEventListener('click', () => {
     window.scrollTo({
       top: 0,
       left: 0,
