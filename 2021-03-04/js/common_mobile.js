@@ -30,21 +30,6 @@ $(document).ready(function(){
 });
 
 
-
-// 페이지 로딩 시 로딩바 구현
-// 로딩 확인
-document.addEventListener('readystatechange', () => console.log(document.readyState));
-$(document).ready(function() {
-    $('#bgLoading').hide();
-
-    $('#bgLoading').ajaxStart(function () {
-        $(this).fadeIn(500);
-    }) .ajaxStop(function () {
-        $(this).fadeOut(300);
-    })
-})
-
-
 // aside 검색창은 공통부분으로 common_mobile.js에 넣었습니다!
 // >> 카테고리 html 파일에 <aside id="search-menu" class="layout-search-area"> 이부분 넣어주시면 돼요!
 
@@ -58,8 +43,7 @@ const searchOpen = document.querySelector('#search-area-open'),
     searchForm = document.querySelector('.layout-search-form'),
     searchWrap = document.querySelector('.layout-search-wrapper '),
     searchInput = document.querySelector('.inp_search'),
-    searchDelete = document.querySelector('.btn_del'),
-    searchKw = document.getElementsByName('kw'),
+    searchDelete = document.querySelector('#searchDelete'),
     searchUl = document.querySelector('.layout-search-result-list'),
     searchItemDel = searchUl.querySelectorAll('.btn_del');
 
@@ -73,7 +57,7 @@ const searchOpen = document.querySelector('#search-area-open'),
         
     // 2. input에 값이 있으면 btn_del에 on 클래스 추가, 값이 없을 때 삭제
         searchInput.addEventListener('input', function() {
-            if (searchInput.value !== '') {
+            if (searchInput.value !== null) {
                 searchDelete.classList.add('on');
             };
         }); 
@@ -90,29 +74,83 @@ const searchOpen = document.querySelector('#search-area-open'),
         wrap.style.cssText = "padding-top: 95px;";
     });
 
-// 4. 최근 검색어 하단(layout-search-wrapper __active)에 li height 값이 들어감
-// + btn_del를 누르면 해당 li 삭제
-// 최근 검색어에 키워드가 보이도록 (중복 방지)
-// 최근 검색어 누르면 검색 결과 페이지로 이동함 (location.href 속성 사용)
 
-let search_value = []; //input의 kw value 리스트
-let search_link_value = []; //list에 kw value를 옮길 곳
+const search_list = document.querySelector('.layout-search-result-list'); //ul
+let idNumbers = 1; // 쿠키에 저장할 리스트 번호 주는 변수
+let search_list_save = []; // 이 배열에 저장했다가 쿠키에 저장할꺼임
 
-for (let i = 0; i < searchKw.length; i ++) { //리스트 값에 저장
-    search_value[i] = searchInput.value;
+searchForm.addEventListener('submit', function() { //엔터치면 paint_list() 함수 실행. input = input 값
+    const input = document.querySelector('.inp_search').value;
+    paint_list(input);
+});
+
+function save_list() {
+    // localStorage: 웹 브라우저에 key, value로 이루어진 데이터 저장. 창 끼리 데이터 공유. 창을 닫아도 데이터가 남음.
+    // string이 아닌 원본 데이터를 그대로 가져오기 위해 JSON으로 직렬화 해줌. 
+    //키에 데이터 쓰기: localStorage.setItem('key', value);
+    //데이터를 서버에 전송할 때 JSON.stringify를 이용해 JSON 표기법의 문자열로 변환
+    localStorage.setItem('key', JSON.stringify(search_list_save));
 }
 
-for (let i = 0; i < searchKw.length; i++) { //list의 길이만큼 input의 kw의 value 값을 배열로 저장
-    // search_value[i] = searchKw[i].value; 
-    searchForm.addEventListener('submit', function() {
-        if (searchKw.value !== null) {
-            let template = document.querySelector('#search-early-item-template'); //template 태그 가져옴
-            let copy = template.content.cloneNode(true); //자식요소까지 포함해 복사
-            searchUl.appendChild(copy); // ul 밑에다 붙임
-        };
-        
-    });
+function paint_list(text) { //input 값 받아와서 추가하는 함수
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    const delBtn = document.createElement("button");
+    const newId = idNumbers;
+    idNumbers += 1; // 쿠키에 변수 저장하고 숫자증가
+
+    li.style.position = "relative";
+    a.innerText = text;
+    a.classList.add("link");
+    delBtn.classList.add("btn_del");
+    delBtn.addEventListener("click", delete_list);
+    li.appendChild(delBtn);
+    li.appendChild(a);
+    li.appendChild(delBtn);
+    li.id = newId;
+    search_list.appendChild(li);
+
+    const search_result = {
+        text : text, // a 태그 안에 들어갈 text
+        id : newId //idNumbers = 쿠키에 저장할 리스트 번호
+    };
+    search_list_save.push(search_result); //배열에 search_list 키와 값들을 넣음. 
+    save_list(); // 배열에 넣은 키, 값 들을 localStorage에 저장
 }
+
+    function delete_list(e) {
+        const btn = e.target;
+        const li = btn.parentNode;
+        search_list.removeChild(li);
+        const clean_list = search_list_save.filter(function(se_list){
+            console.log(se_list.id);
+            console.log(li);
+            return se_list.id !== parseInt(li.id);
+        });
+        search_list_save = clean_list;
+        save_list();
+    }
+
+    
+
+
+    function load_search_list() { // 브라우저 실행했을 때 localStroage에 있는 값을 불러오는 함수
+        const loadedlist = localStorage.getItem('key');
+
+        if (loadedlist !== null) { // 값 체크 
+            const parsedlist = JSON.parse(loadedlist); // string이 아닌 원본 데이터를 그대로 가져오기 위해 JSON으로 역직렬화 해줌. 
+            parsedlist.forEach(function(_index) {
+                paint_list(_index.text);
+            });
+        }
+    }
+
+load_search_list();
+
+
+
+
+
 
 
 
