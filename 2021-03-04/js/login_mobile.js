@@ -58,7 +58,7 @@ function check_input(){
     }
 
     if (document.login_form.save_id.checked === true) { // 아이디 저장을 체크 했을 때
-        setCookie('id', document.login_form.m_id.value, 7); // 쿠키이름을 id로, 아이디 입력 필드 값을 7일 동안 저장
+        setCookie('id', document.login_form.m_id.value, 3); // 쿠키이름을 id로, 아이디 입력 필드 값을 7일 동안 저장
     } else { // 아이디 저장을 체크하지 않았을 때
         setCookie('id', login_form.m_id.value, 0); // 날짜를 0으로 저장하여 쿠키 삭제
     }

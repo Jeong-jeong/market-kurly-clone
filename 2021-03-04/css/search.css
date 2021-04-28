@@ -638,7 +638,6 @@
 #cartPut .cart_option .list .up {
     float: right;
     position: relative;
-    bottom: 30px;
     background: #fff url(https://res.kurly.com/pc/ico/2010/ico_plus.svg) no-repeat 50% 50%;
     background-size: 30px 30px;
 }
